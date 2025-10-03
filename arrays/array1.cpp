@@ -25,6 +25,7 @@ void Array()
     {
         cin >> arr[i];
     }
+
     cout << "Here is the total arrays values from index 0 to 9" << endl;
     for (int j = 0; j < length; j++)
     {
@@ -32,8 +33,33 @@ void Array()
     }
 }
 
-int main()
+int LargestinArray(int arr[], int length)
 {
 
-    Array();
+    int max = arr[0];
+    for (int i = 1; i < length; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+
+int main()
+{
+    // int arr[5] = {45, 700, 43, 24, 10};
+    // int length;
+    // length = sizeof(arr) / sizeof(int);
+    // cout << LargestinArray(arr, length) << endl;
+    // Array();
+
+    // array are  passe by refernce
+    int arr [2]= {2,4};
+    cout<<*(arr+1)<<endl;
+   int* var;
+   var = arr;
+   cout<<var<<endl;
 }
