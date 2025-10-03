@@ -128,4 +128,12 @@ int main()
     {
         cout << "Element not found" << endl;
     }
+
+    // Array Pointer 
+    // =>Array pointer acts like a constant pointer
+    int a=10;
+    int *ptr =&a;
+     cout<<ptr<<endl;
+    ptr++;
+    cout<<ptr<<endl;
 }
