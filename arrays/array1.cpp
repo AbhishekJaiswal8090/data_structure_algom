@@ -47,19 +47,32 @@ int LargestinArray(int arr[], int length)
     return max;
 }
 
+// implementing linear search
+void LinearSearch(int arr[],int key , int length){
+    for(int i=0; i<length; i++){
+        if(arr[i]==key){
+            cout<<key<<" is found into the array"<<endl;
+            break;
+        }
+    }
+}
 
 int main()
 {
-    // int arr[5] = {45, 700, 43, 24, 10};
-    // int length;
-    // length = sizeof(arr) / sizeof(int);
+    int arr[5] = {45, 700, 43, 24, 10};
+    int length;
+    length = sizeof(arr) / sizeof(int);
+    int key=90;
     // cout << LargestinArray(arr, length) << endl;
     // Array();
 
     // array are  passe by refernce
-    int arr [2]= {2,4};
-    cout<<*(arr+1)<<endl;
-   int* var;
-   var = arr;
-   cout<<var<<endl;
+//     int arr [2]= {2,4};
+//     cout<<*(arr+1)<<endl;
+//    int* var;
+//    var = arr;
+//    cout<<var<<endl;
+
+
+   LinearSearch(arr,key,length);
 }
