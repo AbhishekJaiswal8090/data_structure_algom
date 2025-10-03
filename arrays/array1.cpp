@@ -60,13 +60,40 @@ void LinearSearch(int arr[], int key, int length)
     }
 }
 
+// Implemeting Binary Search
+
+int BinarySearch(int arr[], int key, int length)
+{
+    int start = 0;
+    int end = length - 1;
+
+    while (start <= end)
+    {
+        int mid = (start + end) / 2;
+        if (arr[mid] == key)
+        {
+            return mid;
+        }
+        else if (arr[mid] > key)
+        {
+            end = mid - 1;
+        }
+        else
+        {
+            start = mid + 1;
+        }
+    }
+    return -1;
+}
+
 int main()
 {
-    int arr[5] = {45, 700, 43, 24, 10};
+    cout << "hello" << endl;
+    int arr[5] = {10,20,30,40,50};
     int length;
     length = sizeof(arr) / sizeof(int);
-    int key = 90;
-
+    int key = 40;
+    
     // cout << LargestinArray(arr, length) << endl;
     // Array();
 
@@ -79,16 +106,26 @@ int main()
 
     //    LinearSearch(arr,key,length);
 
-    
     //    reversal of array
-    int temp;
-    for(int i=0; i<length/2; i++){
-        temp = arr[i];
-        arr[i]=arr[length-1-i];
-        arr[length-1-i]=temp;
-    }
+    // int temp;
+    // for(int i=0; i<length/2; i++){
+    //     temp = arr[i];
+    //     arr[i]=arr[length-1-i];
+    //     arr[length-1-i]=temp;
+    // }
 
-    for(int i=0;  i<length; i++){
-        cout<<arr[i]<<endl;
+    // for(int i=0;  i<length; i++){
+    //     cout<<arr[i]<<endl;
+    // }
+
+    // binary search
+    int result= BinarySearch(arr, key, length);
+    if (result != -1)
+    {
+        cout << "Element found at index: " << result << endl;
+    }
+    else
+    {
+        cout << "Element not found" << endl;
     }
 }
