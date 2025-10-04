@@ -86,11 +86,30 @@ void KadanesAlgom(){
     cout<<"Max sum is: "<<maxSum;
 }
 
+int TwoSum(int nums[], int target, int n){
+    
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            if((nums[i] +nums[j])==target){
+              return i,j;
+            }
+        }
+    }
+}
 
 
 int main()
 {
     // PrintingSubArray();
     // MaxSubArraySum2();
-    KadanesAlgom();
+    // KadanesAlgom();
+
+    // Two SUm
+    int nums[] ={2,7,11,15};
+    int target =9;
+    int i=0;
+    int j=0;
+    int n=sizeof(nums)/sizeof(int);
+    i,j=  TwoSum(nums,target,n);
+    cout<<i<<j;
 }
