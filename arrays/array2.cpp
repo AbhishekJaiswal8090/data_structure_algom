@@ -69,8 +69,28 @@ void MaxSubArraySum2()
     cout << "Max val is: " << maxSum << endl;
 }
 
+// Kadane's algom (Highly Optimized)
+
+void KadanesAlgom(){
+     int maxSum = INT_MIN;
+     int curSum=0;
+    int arr[] = {-1, -2, -3, -4, -5};
+    int n = sizeof(arr) / sizeof(int);
+    for(int i=0; i<n; i++){
+        curSum +=arr[i];
+        maxSum=max(curSum,maxSum);
+        if(curSum <0){
+            curSum=0;
+        }
+    }
+    cout<<"Max sum is: "<<maxSum;
+}
+
+
+
 int main()
 {
     // PrintingSubArray();
-    MaxSubArraySum2();
+    // MaxSubArraySum2();
+    KadanesAlgom();
 }
