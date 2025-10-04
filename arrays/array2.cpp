@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 void PrintingSubArray()
@@ -20,12 +21,11 @@ void PrintingSubArray()
     }
 }
 
-
 // Brute Force
 void MaxSubArraySum()
 {
-    int sum=0;
-    int max=0;
+    int sum = 0;
+    int max = INT_MIN;
     int arr[] = {1, 2, 3, 4, 5};
     int n = sizeof(arr) / sizeof(int);
     for (int i = 0; i < n; i++)
@@ -35,26 +35,42 @@ void MaxSubArraySum()
             for (int k = i; k <= j; k++)
             {
                 cout << arr[k] << ",";
-                sum +=arr[k];
+                sum += arr[k];
             }
-            cout<<"sum: "<<sum<<endl;
-            if(sum > max){
-                max=sum;
+            cout << "sum: " << sum << endl;
+            if (sum > max)
+            {
+                max = sum;
             }
-            sum=0;
+            sum = 0;
             cout << endl;
         }
         cout << endl;
     }
-     cout<<"Max val is: "<<max<<endl;
+    cout << "Max val is: " << max << endl;
 }
 
-
-
-
+// Optimized
+void MaxSubArraySum2()
+{
+    int maxSum = INT_MIN;
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(int);
+    for (int i = 0; i < n; i++)
+    {
+        int curSum = 0;
+        for (int j = i; j < n; j++)
+        {
+            curSum += arr[j];
+            maxSum = max(curSum, maxSum);
+        }
+        cout << endl;
+    }
+    cout << "Max val is: " << maxSum << endl;
+}
 
 int main()
 {
     // PrintingSubArray();
-    MaxSubArraySum();
+    MaxSubArraySum2();
 }
