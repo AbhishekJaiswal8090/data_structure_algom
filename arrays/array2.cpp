@@ -71,45 +71,50 @@ void MaxSubArraySum2()
 
 // Kadane's algom (Highly Optimized)
 
-void KadanesAlgom(){
-     int maxSum = INT_MIN;
-     int curSum=0;
+void KadanesAlgom()
+{
+    int maxSum = INT_MIN;
+    int curSum = 0;
     int arr[] = {-1, -2, -3, -4, -5};
     int n = sizeof(arr) / sizeof(int);
-    for(int i=0; i<n; i++){
-        curSum +=arr[i];
-        maxSum=max(curSum,maxSum);
-        if(curSum <0){
-            curSum=0;
+    for (int i = 0; i < n; i++)
+    {
+        curSum += arr[i];
+        maxSum = max(curSum, maxSum);
+        if (curSum < 0)
+        {
+            curSum = 0;
         }
     }
-    cout<<"Max sum is: "<<maxSum;
+    cout << "Max sum is: " << maxSum;
 }
 
-int TwoSum(int nums[], int target, int n){
-    
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            if((nums[i] +nums[j])==target){
-              return i,j;
-            }
-        }
+// Buy and sell stocks
+// brute force
+int BuyAndSellStock(int *prices, int buy_day, int n)
+{
+    int high_price = 0;
+    int profit = 0;
+    for (int i = buy_day; i < n; i++)
+    {
+        high_price = max(high_price, prices[i]);
     }
+    if (high_price > prices[buy_day])
+    {
+        profit = high_price - prices[buy_day];
+        return profit;
+    }
+    return 0;
 }
-
 
 int main()
 {
     // PrintingSubArray();
     // MaxSubArraySum2();
     // KadanesAlgom();
-
-    // Two SUm
-    int nums[] ={2,7,11,15};
-    int target =9;
-    int i=0;
-    int j=0;
-    int n=sizeof(nums)/sizeof(int);
-    i,j=  TwoSum(nums,target,n);
-    cout<<i<<j;
+    int prices[6] ={7,1,5,3,6,4};
+    int ans =  BuyAndSellStock(prices,2,6);
+    cout<<ans<<endl;
+    int ans2 = BuyAndSellStock(prices,0,6);
+    cout<<ans2<<endl;
 }
