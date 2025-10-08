@@ -5,14 +5,20 @@ using namespace std;
 void trapWater(int *height,int n){
     
     int leftmax[20000];
-
+    int rightmax[20000];
     // initialsing first val to minus of negative
     leftmax[0]=INT_MIN;
+    rightmax[n]=INT_MIN;
 
     // calculating leftmax vals
     for(int i=1; i<(n-1); i++){
         leftmax[i]=max(height[i-1],leftmax[i-1]);
         cout<<leftmax[i]<<",";
+    }
+    cout<<endl;
+    for(int i=(n-2); i>=0; i--){
+        rightmax[i]=max(height[i+1],rightmax[i+1]);
+        cout<<rightmax[i]<<",";
     }
 
 
