@@ -1,35 +1,44 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
 
 // implemetning bubble sort
 
-
-void PrintSorted(int* arr ,int n){
-      for(int i=0; i<n; i++){
-        cout<<arr[i]<<",";
-      }
+void PrintSorted(int *arr, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << ",";
+    }
 }
-
-void BubbleSort(int *arr,int n){
-     for(int i=0; i<n; i++){
-        for(int j=0; j<n-i-1; j++){
-            if(arr[j] >arr[j+1]){
-                swap(arr[j] ,arr[j+1]);
+// ascending order
+void BubbleSort(int *arr, int n)
+{
+    bool isSwap = false;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+                isSwap = true;
             }
         }
-     }
+        if (!isSwap)
+        {
+            // arrays is already sorted
+            return;
+        }
+    }
 
-     PrintSorted(arr,n);
+    PrintSorted(arr, n);
 }
 
+int main()
+{
 
-int main(){
-  
-    int arr[5] ={5,4,1,3,2};
-    int n=sizeof(arr)/sizeof(int);
+    int arr[5] = {5, 4, 1, 3, 2};
+    int n = sizeof(arr) / sizeof(int);
 
-    BubbleSort(arr ,n);
-   
-
+    BubbleSort(arr, n);
 }
