@@ -25,9 +25,14 @@ void InsertionSort(int arr[], int n)
         arr[prev + 1] = curr;
     }
 
-    PrintSorted(arr, n)
+    PrintSorted(arr, n);
 }
 
 int main()
 {
+
+    int arr[]= {3,6,1,2,9};
+    int n=sizeof(arr)/sizeof(int);
+    InsertionSort(arr,n);
+    
 }
