@@ -1,5 +1,5 @@
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
 // IN-BUILD SORTING METHOD TECHNIQUES
@@ -10,22 +10,22 @@ using namespace std;
 // Descending order
 // sort(start ,end,greater<int>())
 
-int main(){
+int main()
+{
 
-    int arr[9]={4,0,2,0,1,76,56,67,9};
-    sort(arr,arr+9);
+    int arr[9] = {4, 0, 2, 0, 1, 76, 56, 67, 9};
+    sort(arr, arr + 9);
 
-    for(int i=0; i<9; i++){
-        cout<<arr[i]<<",";
+    for (int i = 0; i < 9; i++)
+    {
+        cout << arr[i] << ",";
     }
 
-    cout<<endl;
+    cout << endl;
 
-    sort(arr,arr+9 ,greater<int>());
-     for(int i=0; i<9; i++){
-        cout<<arr[i]<<",";
+    sort(arr, arr + 9, greater<int>());
+    for (int i = 0; i < 9; i++)
+    {
+        cout << arr[i] << ",";
     }
-
-
-
 }
