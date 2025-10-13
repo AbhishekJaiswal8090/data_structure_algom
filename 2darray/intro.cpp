@@ -40,5 +40,8 @@ int main(){
         cout<<endl;
     }    
 
+    // 2d arrays in memory still are stored as linearly just like 
+    // 1d arrays 
+
 
 }
