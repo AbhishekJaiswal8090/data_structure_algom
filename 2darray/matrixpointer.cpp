@@ -8,4 +8,6 @@ int main()
     cout << endl;
     cout<<matrix<<endl; /*returns hexadecimal val which is memory loaction*/
     cout<<matrix+1;
+
+    
 }
