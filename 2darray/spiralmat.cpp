@@ -7,7 +7,7 @@ void spiralMatrix(int arr[][4], int n, int m)
     int srow = 0;
     int erow = n - 1;
     int scolum = 0;
-    int ecolum = n - 1;
+    int ecolum = m - 1;
     while (srow <= erow && scolum <= ecolum)
     {
         // top
@@ -26,7 +26,7 @@ void spiralMatrix(int arr[][4], int n, int m)
             cout << arr[erow][k] << " ";
         }
         // left
-        for (int l = erow - 1; l >= srow + 1; l--)
+        for (int l = erow - 1; l >= srow ; l--)
         {
             cout << arr[l][scolum] << " ";
         }
@@ -46,4 +46,5 @@ int main()
                         {13, 14, 15, 16}};
 
     spiralMatrix(matrix, 4, 4);
+
 }
