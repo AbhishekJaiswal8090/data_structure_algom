@@ -2,6 +2,7 @@
 using namespace std;
 
 // search in sorted matrix problem
+// staircase search property
 bool searchInSorted(int matrix[3][3], int n, int m, int target)
 {
     int i = 0;
