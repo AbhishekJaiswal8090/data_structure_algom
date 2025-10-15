@@ -2,7 +2,7 @@
 using namespace std;
 
 // character arrays
-
+// creation
 int main()
 {
 
@@ -16,4 +16,11 @@ int main()
 
     char str1[3]={'c','d','\0'};
     cout<<str1<<endl;
+   
+    // Input/output
+    char work[]="code"; //string literal
+    cout<<work<<endl;
+
+    
+    
 }
