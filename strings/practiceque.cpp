@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+
+// change to uppercase
 void toUpper(char word[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -19,6 +21,8 @@ void toUpper(char word[], int n)
     }
 }
 
+
+// change to lowercase
 void toLower(char word[],int m){
     for(int i=0; i<m; i++){
         char ch=word[i];
@@ -30,11 +34,38 @@ void toLower(char word[],int m){
     }
 }
 
+// Reverse a char array ==>brute force
+void reverseAchar(char word[],int n){
+    for(int i=0; i<n/2;i++){
+        int t =word[i];
+        word[i]=word[n-i-1];
+        word[n-i-1]=t;
+    }
+    cout<<word<<endl;
+}
+// optimized
+void reversingChar(char word[], int n){
+
+    if(n==0) return ;
+    int start =0;
+    int end =n-1;
+
+    while(start <end){
+        swap(word[start],word[end]);
+        start++;
+        end--;
+    }
+
+}
+
 int main()
 {
     char word[9] = "Abhishek";
     toUpper(word,9 );
     cout<<word<<endl;
     toLower(word,9);
+    cout<<word<<endl;
+    // reverseAchar(word,8);
+    reversingChar(word,8);
     cout<<word<<endl;
 }
