@@ -51,9 +51,7 @@ void reversingChar(char word[], int n){
     int end =n-1;
 
     while(start <end){
-        swap(word[start],word[end]);
-        start++;
-        end--;
+        swap(word[start++],word[end--]);
     }
 
 }
