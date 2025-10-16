@@ -15,14 +15,13 @@ void toUpper(char word[], int n)
         {
             word[i] = ch - 'a' + 'A';
         }
-        else
-        {
-            cout << "Out of our league" << endl;
-        }
+       
     }
 }
 
 int main()
 {
-    char word[9] = "abhiShek";
+    char word[9] = "Abhishek";
     toUpper(word,9 );
+    cout<<word<<endl;
+}
