@@ -19,9 +19,22 @@ void toUpper(char word[], int n)
     }
 }
 
+void toLower(char word[],int m){
+    for(int i=0; i<m; i++){
+        char ch=word[i];
+        if(ch >='a' && ch <='z'){
+            continue;
+        }else{
+            word[i]=ch-'A' +'a';
+        }
+    }
+}
+
 int main()
 {
     char word[9] = "Abhishek";
     toUpper(word,9 );
+    cout<<word<<endl;
+    toLower(word,9);
     cout<<word<<endl;
 }
