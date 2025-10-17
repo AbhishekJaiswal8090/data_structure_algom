@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <string>
 using namespace std;
 
 // change to uppercase
@@ -79,14 +80,46 @@ bool validPalindrome(char word[], int n)
     return true;
 }
 
+// another practice question
+
+void smallletterVoweloccurence(string s)
+{
+
+    int count = 0;
+    for (int i = 0; i < s.size(); i++)
+    {
+        switch (s[i])
+        {
+        case 'a':
+            count++;
+            break;
+        case 'e':
+            count++;
+            break;
+        case 'i':
+            count++;
+            break;
+        case 'o':
+            count++;
+            break;
+        case 'u':
+            count++;
+            break;
+        }
+    }
+    cout << count << endl;
+}
+
 int main()
 {
-    char word[9] = "Abhishek";
-    toUpper(word, 9);
-    cout << word << endl;
-    toLower(word, 9);
-    cout << word << endl;
-    // reverseAchar(word,8);
-    reversingChar(word, 8);
-    cout << word << endl;
+    // char word[9] = "Abhishek";
+    // toUpper(word, 9);
+    // cout << word << endl;
+    // toLower(word, 9);
+    // cout << word << endl;
+    // // reverseAchar(word,8);
+    // reversingChar(word, 8);
+    // cout << word << endl;
+
+    smallletterVoweloccurence("Abhishek");
 }
