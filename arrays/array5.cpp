@@ -20,4 +20,5 @@ int main()
 {
     int arr[4] = {4, 3, 7, 2};
     subArray1(arr, 4);
+    cout<<"abhise jaiswal"<<endl;
 }

@@ -14,5 +14,12 @@ int main()
     // use stack memory
 
     // memory leak
+    // A MEMORY LEAK HEPPENS WHEN PROGRAMMERS CREATE A MEMORY
+    // IN A HEAP AMD FORGET TO DELETE  IT
+    // LEADS TO REDUCE PERFORMANCE DUE TO DPLETION OF AVAILABLE MEMORY
     
+
+
+
+
 }
