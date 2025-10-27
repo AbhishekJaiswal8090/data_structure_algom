@@ -18,6 +18,8 @@ int main()
     // IN A HEAP AMD FORGET TO DELETE  IT
     // LEADS TO REDUCE PERFORMANCE DUE TO DPLETION OF AVAILABLE MEMORY
     
+    // 2d dynamiuc array
+    
 
 
 
