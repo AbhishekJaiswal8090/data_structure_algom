@@ -1,7 +1,14 @@
 #include<iostream>
 using namespace std;
 
-// PRACTICE QUESTIONS 
+// PRACTICE QUESTIONS
+void oddOrEven(int n){
+    if(!(n&1)){
+        cout<<"Even number"<<endl;
+    }else{
+        cout<<"odd number"<<endl;
+    }
+}
 
 int main(){
 
@@ -15,6 +22,11 @@ int main(){
     // PREDICT THE OUTPUT FOR 8 >> 1
     // 00001000 >> `1 BECOMES => 00000100 
     cout<<(8>>1)<<endl;
+
+    // CEHCK IF NUMS IS ODD OR EVEN
+    // USING BIT MANIPULATION
+    oddOrEven(67); //odd
+    oddOrEven(8);
 
 
     return 0;
