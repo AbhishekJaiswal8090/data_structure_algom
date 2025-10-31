@@ -27,6 +27,12 @@ int getPos(int n, int i)
     }
 }
 
+void setPos(int n, int i)
+{
+    int bitmask = 1 << i;
+    cout << endl
+         << (n | bitmask);
+}
 int main()
 {
 
@@ -48,7 +54,12 @@ int main()
 
     // GET iTH BIT
     // 1<<i and then take and with bitmask and num
-    cout<<endl<<getPos(7,1);
+    cout << endl
+         << getPos(7, 1);
+
+        //  SET Ith position
+        // 1<<i and then take OR eith bitmask and n
+        setPos(2,0);
 
     return 0;
 }
