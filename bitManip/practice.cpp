@@ -33,6 +33,15 @@ void setPos(int n, int i)
     cout << endl
          << (n | bitmask);
 }
+
+
+void clearPos(int n, int i)
+{
+    int bitmask = ~(1 << i);
+    cout << (n & bitmask) << endl;
+}
+
+
 int main()
 {
 
@@ -57,9 +66,14 @@ int main()
     cout << endl
          << getPos(7, 1);
 
-        //  SET Ith position
-        // 1<<i and then take OR eith bitmask and n
-        setPos(2,0);
+    //  SET Ith position  => setting ith position to the 1 if it is zero and remains 1 if it is one
+    // 1<<i and then take OR eith bitmask and n
+    setPos(2, 0);
+
+    cout << endl;
+
+    // clear the ith BIT => setting the ith postion to zero if it is one and remains zero if it is zero
+    clearPos(6, 1);
 
     return 0;
 }
