@@ -59,6 +59,13 @@ void setBitPos(int n, int i, int val)
     cout << n << endl;
 }
 
+void clearBit(int n, int i)
+{
+    int bitmask = ((~0) >> i);
+
+    cout << (n & bitmask) << endl;
+}
+
 int main()
 {
 
@@ -97,6 +104,9 @@ int main()
 
     // setting a particular bit to a partivcular position
     setBitPos(2, 1, 1);
+
+    // clearing the i bits to a prticular number
+    clearBit(6, 1);
 
     return 0;
 }
