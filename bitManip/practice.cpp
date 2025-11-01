@@ -52,6 +52,13 @@ bool checkPowertwo(int n)
     }
 }
 
+void setBitPos(int n, int i, int val)
+{
+    n = n & ~(1 << i);
+    n = n | (val << i);
+    cout << n << endl;
+}
+
 int main()
 {
 
@@ -87,6 +94,9 @@ int main()
 
     // check for power of 2
     checkPowertwo(5);
+
+    // setting a particular bit to a partivcular position
+    setBitPos(2, 1, 1);
 
     return 0;
 }
