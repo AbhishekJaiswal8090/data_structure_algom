@@ -34,13 +34,23 @@ void setPos(int n, int i)
          << (n | bitmask);
 }
 
-
 void clearPos(int n, int i)
 {
     int bitmask = ~(1 << i);
     cout << (n & bitmask) << endl;
 }
 
+bool checkPowertwo(int n)
+{
+    if (!(n & (n - 1)))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 int main()
 {
@@ -74,6 +84,9 @@ int main()
 
     // clear the ith BIT => setting the ith postion to zero if it is one and remains zero if it is zero
     clearPos(6, 1);
+
+    // check for power of 2
+    checkPowertwo(5);
 
     return 0;
 }
