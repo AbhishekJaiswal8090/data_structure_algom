@@ -44,13 +44,29 @@ void PrintNum(int n)
     PrintNum(n - 1);
 }
 
-// sum of all natural numbers 
-int sumNaturalnumber(int n){
-    int sum =sum +n;
-   if(n==1){
-    return 1;
-   }
-   return n+ sumNaturalnumber(n-1);
+// sum of all natural numbers
+int sumNaturalnumber(int n)
+{
+    int sum = sum + n;
+    if (n == 1)
+    {
+        return 1;
+    }
+    return n + sumNaturalnumber(n - 1);
+}
+
+int fibnoacci(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+
+    return fibnoacci(n - 1) + fibnoacci(n - 2);
 }
 
 int main()
@@ -68,12 +84,15 @@ int main()
     cout << endl;
 
     // stack overflow
-    // => stack overflow is a state in which the stack  continues to allocate memoery 
-    // for a task that doesn't end 
-    // and in the end we get segmentation fault and our stack in memory get fully filled 
+    // => stack overflow is a state in which the stack  continues to allocate memoery
+    // for a task that doesn't end
+    // and in the end we get segmentation fault and our stack in memory get fully filled
 
+    int ans1 = sumNaturalnumber(5);
+    cout << ans1;
 
-    int ans1=sumNaturalnumber(5);
-    cout<<ans1;
+    cout << endl;
+    int ans2 = fibnoacci(3);
+    cout << ans2;
     return 0;
 }
