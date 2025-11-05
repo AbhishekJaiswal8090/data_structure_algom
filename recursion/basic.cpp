@@ -25,6 +25,13 @@ int factorial(int n){
     return n* factorial(n-1);
 }
 
+// it is a method of solving computational problems where the solution 
+// depends on solution to smaller instances of the same problems 
+
+// => Base Case is the most important in order to know wehen to stop the loop
+
+
+
 int main()
 {
 
