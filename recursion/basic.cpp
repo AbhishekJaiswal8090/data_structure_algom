@@ -31,6 +31,16 @@ int factorial(int n){
 // => Base Case is the most important in order to know wehen to stop the loop
 
 
+// printing elements in decreasing oredre 
+
+void PrintNum(int n){
+    if(n==0){
+        return;
+    }
+    cout<<n<<",";
+    PrintNum(n-1);
+}
+
 
 int main()
 {
@@ -42,6 +52,7 @@ int main()
     // printArr(arr, 5, i);
     int ans = factorial(5);
     cout<<ans<<endl;
+    PrintNum(10);
  
 
 
