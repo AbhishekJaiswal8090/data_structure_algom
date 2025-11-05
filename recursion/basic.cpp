@@ -58,5 +58,10 @@ int main()
 
     cout << endl;
 
+    // stack overflow
+    // => stack overflow is a state in which the stack  continues to allocate memoery 
+    // for a task that doesn't end 
+    // and in the end we get segmentation fault and our stack in memory get fully filled 
+
     return 0;
 }
