@@ -44,6 +44,15 @@ void PrintNum(int n)
     PrintNum(n - 1);
 }
 
+// sum of all natural numbers 
+int sumNaturalnumber(int n){
+    int sum =sum +n;
+   if(n==1){
+    return 1;
+   }
+   return n+ sumNaturalnumber(n-1);
+}
+
 int main()
 {
 
@@ -63,5 +72,8 @@ int main()
     // for a task that doesn't end 
     // and in the end we get segmentation fault and our stack in memory get fully filled 
 
+
+    int ans1=sumNaturalnumber(5);
+    cout<<ans1;
     return 0;
 }
