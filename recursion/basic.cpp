@@ -18,43 +18,45 @@ using namespace std;
 //     return printArr(arr, 5, i++);
 // }
 
-int factorial(int n){
-    if(n==0){
+int factorial(int n)
+{
+    if (n == 0)
+    {
         return 1;
     }
-    return n* factorial(n-1);
+    return n * factorial(n - 1);
 }
 
-// it is a method of solving computational problems where the solution 
-// depends on solution to smaller instances of the same problems 
+// it is a method of solving computational problems where the solution
+// depends on solution to smaller instances of the same problems
 
 // => Base Case is the most important in order to know wehen to stop the loop
 
+// printing elements in decreasing oredre
 
-// printing elements in decreasing oredre 
-
-void PrintNum(int n){
-    if(n==0){
+void PrintNum(int n)
+{
+    if (n == 0)
+    {
         return;
     }
-    cout<<n<<",";
-    PrintNum(n-1);
+    cout << n << ",";
+    PrintNum(n - 1);
 }
-
 
 int main()
 {
 
     // // func();
     // int i = 0;
-    // int arr[5] = {2, 4, 6, 8, 10};
-    // int n = 5;
+    int arr[5] = {2, 4, 6, 8, 10};
+    int n = 5;
     // printArr(arr, 5, i);
     int ans = factorial(5);
-    cout<<ans<<endl;
+    cout << ans << endl;
     PrintNum(10);
- 
 
+    cout << endl;
 
     return 0;
 }
