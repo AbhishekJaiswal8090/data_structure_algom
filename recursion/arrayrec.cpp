@@ -31,6 +31,8 @@ int findOccurence(int arr[], int n, int i, int target)
     return findOccurence(arr, n, i + 1, target);
 }
 
+// wap to find the last occurenec of an element in  a vector
+
 int lastoccurenec(int arr [], int n, int i, int target){
     if(i==0){
         return -1;
@@ -40,6 +42,19 @@ int lastoccurenec(int arr [], int n, int i, int target){
     }
     return lastoccurenec(arr, n ,i-1,target);
 }
+
+// print x to the power n 
+int  PrintX(int x , int n,int i){
+    
+    
+    if(i==n){
+        cout<<x;
+        return;
+    }
+    return x* PrintX(x ,n,i+1);
+
+}
+
 int main()
 {
     int arr[5] = {2, 4, 6, 8, 10};
