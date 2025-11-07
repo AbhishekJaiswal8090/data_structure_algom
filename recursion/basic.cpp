@@ -1,5 +1,5 @@
 #include <iostream>
-#include<string>
+#include <string>
 using namespace std;
 
 // recursion
@@ -71,29 +71,41 @@ int fibnoacci(int n)
 }
 
 // tiling problem
-int Tiling(int n){
+int Tiling(int n)
+{
 
     // base case
-    if(n==0 || n==1)return 1;
+    if (n == 0 || n == 1)
+        return 1;
 
     // rcursive cases are =>
 
-    // vertical 
-    int ans1 = Tiling(n-1);
+    // vertical
+    int ans1 = Tiling(n - 1);
 
     // horizontal
-    int ans2 = Tiling(n-2);
+    int ans2 = Tiling(n - 2);
 
-    int ans =  ans1 + ans2;
+    int ans = ans1 + ans2;
     return ans;
 }
 
-// removing duplicates string froma string 
-void removeString(string s,int i , int map[26], string ans ){
-   
-    string ch 
+// removing duplicates string froma string
+void removeString(string str, int i, int map[26], string ans)
+{
 
+    char ch = str[i];
+    int idx = (int)(ch - 'a');
 
+    if (map[idx] == true)
+    {
+        removeString(str, i + 1, map, ans);
+    }
+    else
+    {
+        map[idx] = true;
+        removeString(str, i + 1, map, ans + str[i]);
+    }
 }
 
 int main()
@@ -121,5 +133,10 @@ int main()
     cout << endl;
     int ans2 = fibnoacci(5);
     cout << ans2;
+
+    int map[26] = {false};
+    char ans = "";
+    removeString("abhisheek", 0, map, ans);
+
     return 0;
 }
