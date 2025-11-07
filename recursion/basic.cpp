@@ -89,8 +89,10 @@ int Tiling(int n){
 }
 
 // removing duplicates string froma string 
-void removeString(string s){
-    int n = s
+void removeString(string s,int i , int map[26], string ans ){
+   
+    string ch 
+
 
 }
 
