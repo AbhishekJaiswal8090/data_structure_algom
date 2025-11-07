@@ -69,5 +69,6 @@ int main()
 
     int lastidx=lastoccurenec(arr,5,4,4);
     cout<<lastidx;
+
     return 0;
 }

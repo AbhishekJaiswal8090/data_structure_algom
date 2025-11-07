@@ -92,7 +92,7 @@ int main()
     cout << ans1;
 
     cout << endl;
-    int ans2 = fibnoacci(3);
+    int ans2 = fibnoacci(5);
     cout << ans2;
     return 0;
 }
