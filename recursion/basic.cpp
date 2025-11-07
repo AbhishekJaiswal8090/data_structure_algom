@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 using namespace std;
 
 // recursion
@@ -85,6 +86,12 @@ int Tiling(int n){
 
     int ans =  ans1 + ans2;
     return ans;
+}
+
+// removing duplicates string froma string 
+void removeString(string s){
+    int n = s
+
 }
 
 int main()
