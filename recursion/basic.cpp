@@ -69,6 +69,24 @@ int fibnoacci(int n)
     return fibnoacci(n - 1) + fibnoacci(n - 2);
 }
 
+// tiling problem
+int Tiling(int n){
+
+    // base case
+    if(n==0 || n==1)return 1;
+
+    // rcursive cases are =>
+
+    // vertical 
+    int ans1 = Tiling(n-1);
+
+    // horizontal
+    int ans2 = Tiling(n-2);
+
+    int ans =  ans1 + ans2;
+    return ans;
+}
+
 int main()
 {
 
