@@ -1,0 +1,17 @@
+STL IN C++
+STL is a collection of pre built classes and functions that make it easyto manage 
+data using common data structures like vectors , stacks and maps .
+It saves times and effort by providing ready to use efficient algorithms and 
+containers 
+
+COMPONENTS OF STL 
+1.Containers 
+2.Iterators 
+3.Algorithms
+
+Containers 
+=> these are the data structures used to store objects and data according 
+to the requirements .
+
+INstead of wrirting your own data staructures , STL provides ready made 
+containers.
