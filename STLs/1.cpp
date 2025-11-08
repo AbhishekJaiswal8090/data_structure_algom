@@ -34,6 +34,35 @@ void Vector()
     {
         cout << num << ",";
     }
+
+    // Access any element at any position
+    cout << v.at(0) << endl;
+    cout << v[3] << endl;
+
+    // updtae any particular value
+    v[3] = 56;
+    cout << v[3] << endl;
+
+    // find vector length
+    int n = v.size();
+    cout << n << endl;
+
+    // vector can store amy typoe of avlue
+    vector<char> str;
+    str = {'a', 'b', 'c', 'd', 'e'};
+    for (int i = 0; i < str.size(); i++)
+    {
+        cout << str[i] << endl;
+    }
+
+    // deletinf the last elemnt
+    str.pop_back();
+
+    // deleting any partiuclar elemrnt
+    str.erase(find(str.begin(), str.end(), 'a'));
+
+    // cehecking if an vector is epmpty
+    cout << v.empty() << endl;
 }
 
 int main()
