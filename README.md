@@ -7,6 +7,6 @@ Basically i'm making it online so that when the times i doesn't have my computer
 Let me introduce you to the env setup
 So basically .vscode file ensures to compile and run your program by just pressing ctrl + shift + b , but before pressing it make sure to confirm that you are in right dir.
 
-While the rub.bat file do the same thing it compile and run the file at the same time .
+While the run.bat file do the same thing it compile and run the file at the same time .
 The command is ./run.bat filename.cpp.
 Make sure to be in right directory before compiling it.
