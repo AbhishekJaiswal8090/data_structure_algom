@@ -65,11 +65,87 @@ void Vector()
     cout << v.empty() << endl;
 }
 
+// Deque stand for double ended queue
+// Its a sequence container that allows you to add or remove elemnts
+// efficinetly from both front and back
+// Deque
+
+void Deque()
+{
+    // initialising an deque
+    deque<int> d1;
+
+    // assigining value to the deque
+    d1 = {20, 40, 60};
+
+    // iterating over deque
+    for (int val : d1)
+    {
+        cout << val << ",";
+    }
+
+    // basic operation
+    // inserting any particular position
+
+    // Insert 25 at position 2 (third element)
+    d1.insert(d1.begin() + 2, 25);
+
+    // inserting at last position
+    d1.push_back(200);
+    d1.push_back(300);
+
+    for (int val : d1)
+    {
+        cout << val << ",";
+    }
+
+    // inserting element at the beginiing
+    d1.push_front(00);
+    d1.push_front(59);
+
+    for (int val : d1)
+    {
+        cout << val << ",";
+    }
+
+    // deletion of element
+    // removing from last
+    d1.pop_back();
+    d1.pop_back();
+
+    // removing from front
+    d1.pop_front();
+    d1.pop_front();
+
+    for (int val : d1)
+    {
+        cout << val << ",";
+    }
+
+    // accessing elemnts
+    // elements can be accessed using front() and back()
+
+    cout << d1.front() << endl;
+
+    cout << d1.back();
+
+    // returning length of the deque
+    cout << d1.size() << "," << endl;
+
+    // checking if an deque is empty or not
+    cout << d1.empty() << endl;
+
+    // removing all the elemnts from deque
+    d1.clear();
+}
+
 int main()
 {
     int ans = sum(6, 7);
     cout << ans;
 
     Vector();
+    Deque();
+
     return 0;
 }
