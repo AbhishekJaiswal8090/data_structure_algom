@@ -108,6 +108,28 @@ void removeString(string str, int i, int map[26], string ans)
     }
 }
 
+int FriendPairing(int n)
+{
+
+    // base case
+    if (n == 1)
+    {
+        return 1;
+    }
+    if (n == 2)
+    {
+        return 2;
+    }
+
+    // single
+    // FriendPairing(n-1);
+
+    // pair
+    // (n-1)*FriendPairing(n-2);
+
+    return FriendPairing(n - 1) + (n - 1) * FriendPairing(n - 2);
+}
+
 int main()
 {
 
@@ -137,6 +159,9 @@ int main()
     int map[26] = {false};
     char ans = "";
     removeString("abhisheek", 0, map, ans);
+
+    // Friend pairing
+    cout << FriendPairing(3);
 
     return 0;
 }
