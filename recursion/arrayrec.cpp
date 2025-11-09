@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // checking if an array is sorted using recursion
@@ -33,26 +34,49 @@ int findOccurence(int arr[], int n, int i, int target)
 
 // wap to find the last occurenec of an element in  a vector
 
-int lastoccurenec(int arr [], int n, int i, int target){
-    if(i==0){
+int lastoccurenec(int arr[], int n, int i, int target)
+{
+    if (i == 0)
+    {
         return -1;
     }
-    if(arr[i] == target){
+    if (arr[i] == target)
+    {
         return i;
     }
-    return lastoccurenec(arr, n ,i-1,target);
+    return lastoccurenec(arr, n, i - 1, target);
 }
 
-// print x to the power n 
-int  PrintX(int x , int n,int i){
-    
-    
-    if(i==n){
-        cout<<x;
+// print x to the power n
+int PrintX(int x, int n, int i)
+{
+
+    if (i == n)
+    {
+        cout << x;
+        return 0;
+    }
+    return x * PrintX(x, n, i + 1);
+}
+
+// Binary striings problem
+void binString(int n, int lastplace, string ans)
+{
+
+    if (n == 0)
+    {
+        cout << ans << endl;
         return;
     }
-    return x* PrintX(x ,n,i+1);
-
+    if (lastplace != 1)
+    {
+        binString(n - 1, 0, ans + '0');
+        binString(n - 1, 1, ans + '1');
+    }
+    else
+    {
+        binString(n - 1, 0, ans + '0');
+    }
 }
 
 int main()
@@ -65,10 +89,13 @@ int main()
 
     int idx = findOccurence(arr, 5, 0, 8);
     cout << idx;
-    cout<<endl;
+    cout << endl;
 
-    int lastidx=lastoccurenec(arr,5,4,4);
-    cout<<lastidx;
+    int lastidx = lastoccurenec(arr, 5, 4, 4);
+    cout << lastidx;
+    cout << endl;
+    std::string ans;
+    binString(3, 0, ans);
 
     return 0;
 }
