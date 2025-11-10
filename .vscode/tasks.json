@@ -17,6 +17,7 @@
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"]
+            
         }
     ]
 }
