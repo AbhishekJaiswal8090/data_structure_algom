@@ -1,4 +1,9 @@
 #include <bits/stdc++.h>
+#include <iostream>
+#include <stack>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
 void print()
@@ -155,6 +160,19 @@ void Stack()
 
     // finding out the stack size
     cout << mystack.size() << endl;
+
+    // finding the top element
+    cout << mystack.top() << endl;
+
+    // popping elemnt of the top
+    mystack.pop();
+
+    // setting the top value
+    mystack.top() = 60;
+    cout << mystack.top() << endl;
+
+    // checking if stack is empty
+    cout << mystack.empty() << endl;
 }
 
 int main()
@@ -162,8 +180,9 @@ int main()
     int ans = sum(6, 7);
     cout << ans;
 
-    Vector();
-    Deque();
+    // Vector();
+    // Deque();
+    Stack();
 
     return 0;
 }
