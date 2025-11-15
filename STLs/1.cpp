@@ -175,6 +175,13 @@ void Stack()
     cout << mystack.empty() << endl;
 }
 
+// queue is a data structure that used FIFO order
+// it means the one ehich gets first will be the one to get out
+
+void Queue()
+{
+}
+
 int main()
 {
     int ans = sum(6, 7);
