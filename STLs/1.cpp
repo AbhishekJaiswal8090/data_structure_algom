@@ -139,6 +139,24 @@ void Deque()
     d1.clear();
 }
 
+// stack is a data structure that follows the Last in first out order
+// means the last elemnt that being pushed is the one that can be out at a time
+// to use stack in our code we must include stack header file
+
+void Stack()
+{
+    // initialising stack
+    stack<int> mystack;
+
+    mystack.push(2);
+    mystack.push(4);
+    mystack.push(30);
+    mystack.push(40);
+
+    // finding out the stack size
+    cout << mystack.size() << endl;
+}
+
 int main()
 {
     int ans = sum(6, 7);
