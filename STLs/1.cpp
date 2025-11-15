@@ -201,6 +201,10 @@ void Queue()
     myq.front() = 500;
     cout << myq.front() << endl;
 
+    // poppoing the element from fornt since it follows FIF0 the first to enetr get out first
+    myq.pop();
+    // it doen't return any thing
+
     myq.back() = 1000;
     cout << myq.back() << endl;
 
