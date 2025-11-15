@@ -3,7 +3,7 @@
 #include <stack>
 #include <vector>
 #include <algorithm>
-
+#include <queue>
 using namespace std;
 
 void print()
@@ -177,9 +177,38 @@ void Stack()
 
 // queue is a data structure that used FIFO order
 // it means the one ehich gets first will be the one to get out
+// to use queue we need to use the queue header file first
+// in queue we can on;y access element from either front or either
 
 void Queue()
 {
+    queue<int> myq;
+
+    //   insertion of elelemnt in queue
+    myq.push(20); // front ellemnt
+    myq.push(60);
+    myq.push(70);
+    myq.push(100); // back elelemnt-
+
+    // accessing elemnt can only done from wither front or the back
+
+    cout << myq.front() << endl;
+
+    cout << myq.back() << endl;
+
+    // we can change the elelment from either the front and back
+    // example
+    myq.front() = 500;
+    cout << myq.front() << endl;
+
+    myq.back() = 1000;
+    cout << myq.back() << endl;
+
+    // we can find the size of the queue
+    cout << myq.size() << endl;
+
+    // we can find if the que is empty or not
+    cout << myq.empty() << endl;
 }
 
 int main()
@@ -189,7 +218,8 @@ int main()
 
     // Vector();
     // Deque();
-    Stack();
+    // Stack();
+    Queue();
 
     return 0;
 }
