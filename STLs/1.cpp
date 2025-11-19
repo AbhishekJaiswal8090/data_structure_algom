@@ -1,9 +1,10 @@
-#include <bits/stdc++.h>
 #include <iostream>
+#include <utility>
 #include <stack>
 #include <vector>
 #include <algorithm>
 #include <queue>
+#include <set>
 using namespace std;
 
 void print()
@@ -213,6 +214,23 @@ void Queue()
 
     // we can find if the que is empty or not
     cout << myq.empty() << endl;
+}
+
+// Set
+// Set is an data strucutre used to store distinct elemnets
+// it doesn't keep duplicate elements also it sorts the elements in ascending order
+// To use set we must include set header file
+
+void Set()
+{
+    // initialising set with some value
+    set<int> myset = {2, 3, 4, 5, 6, 7};
+
+    // iterating over set
+    for (int ele : myset)
+    {
+        cout << ele << " ";
+    }
 }
 
 int main()
