@@ -251,6 +251,18 @@ void Set()
 
     // all elements can be removed also
     myset.clear();
+
+    // finding the size of set
+    cout << myset.size() << endl;
+
+    // checking if an set is empty
+    cout << myset.empty() << endl;
+
+    // loop through a set
+    for (int num : myset2)
+    {
+        cout << num << endl;
+    }
 }
 
 int main()
