@@ -265,6 +265,15 @@ void Set()
     }
 }
 
+// MAPS
+// maps in data structure is widely know for its compatability with
+// both key and values , it is used for storing key value pairs
+// it helps in reducing time complexity from 0(n^2) to 0(n)
+
+void Map()
+{
+}
+
 int main()
 {
     int ans = sum(6, 7);
