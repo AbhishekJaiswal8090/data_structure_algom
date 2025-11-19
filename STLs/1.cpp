@@ -231,6 +231,26 @@ void Set()
     {
         cout << ele << " ";
     }
+
+    // sorting the set in ascending order
+    set<int, greater<int>> myset2 = {9, 0, 7, 1, 10, 65};
+    for (int data : myset)
+    {
+        cout << data << endl;
+    }
+
+    // It always stores the unique value
+    // Insertion in set
+    myset2.insert(3);
+    myset2.insert(40);
+    myset.insert(20);
+
+    // removing elements from the set
+    myset.erase(3);
+    myset2.erase(10);
+
+    // all elements can be removed also
+    myset.clear();
 }
 
 int main()
