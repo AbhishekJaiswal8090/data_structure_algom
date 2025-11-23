@@ -26,7 +26,12 @@ int lcm(int a, int b)
 }
 int main()
 {
-    int lcmans = lcm(30, 20);
+    int a , b;
+    cout << "Enter a :"<<endl;
+    cin >>a;
+    cout <<"enter b"<< endl;
+    cin>>b;
+    int lcmans = lcm(a, b);
     cout << lcmans << endl;
     return 0;
 }
