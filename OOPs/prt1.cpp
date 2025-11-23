@@ -2,7 +2,9 @@
 using namespace std;
 
 // in today class we are going to learn all the concepts of ooops and thier implementaation
-// so lets start
+// so lets start Object Oriented Programming 
+// oops is not a pattern but a style of programming
+// it reopresent real world object entities
 
 
 int main(){
