@@ -28,4 +28,5 @@ int main()
 {
     int lcmans = lcm(30, 20);
     cout << lcmans << endl;
+    return 0;
 }
