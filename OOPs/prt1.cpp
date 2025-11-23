@@ -6,10 +6,11 @@ using namespace std;
 // oops is not a pattern but a style of programming
 // it reopresent real world object entities
 
-// often objects have some properties and function 
+// often objects have some properties and function
 // objects are well known as blueprint of classes
 // object are like entities of real world
 
+class 
 
 int main()
 {
