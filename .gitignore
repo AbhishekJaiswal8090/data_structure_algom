@@ -1,0 +1,25 @@
+# Ignore executables and binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.out
+
+# Ignore build system files
+*.class
+*.pyc
+*.pyo
+*.pdb
+*.idb
+*.lib
+*.a
+*.lo
+*.lai
+*.suo
+*.user
+*.ncb
+*.sdf
+*.ipch
+*.db
