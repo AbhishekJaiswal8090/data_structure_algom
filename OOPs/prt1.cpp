@@ -22,7 +22,6 @@ class Student
     {
         cout << (sgpa * 10) << endl;
     }
-
 };
 
 class User
@@ -43,11 +42,17 @@ class User
     }
 };
 
-int main(){
+int main()
+{
     User user1;
     Student std1;
-    // these are nothing but the objects 
-    // in other words these are blueprint of class 
+    // these are nothing but the objects
+    // in other words these are blueprint of class
     // which store some val and perform some task just like real world entities
-
 }
+
+// four pillar of OOps
+// encapsulation
+// inheritance
+// abstraction
+// polymorphism
