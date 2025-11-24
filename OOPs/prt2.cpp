@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string> // ADD THIS
 using namespace std;
 
 // Access Modifierss
@@ -12,11 +13,13 @@ class Student
 public:
     string name;
     string lastname;
-    void Set(string name, string lastname)
+
+    void Set(string n, string l) // Rename parameters to avoid shadowing
     {
-        name = name;
-        lastname = lastname;
+        name = n;
+        lastname = l;
     }
+
     void PrintName()
     {
         cout << name << endl;
@@ -26,9 +29,40 @@ public:
 
 // by default every variable in class is Protected means you can not acces it outside of class
 
+// getters and setters
+class Employees
+{
+    string name;
+    string lastname;
+
+public:
+    // setters
+    void setName(string n)
+    {
+        name = n;
+    }
+
+    void setLastname(string l)
+    {
+        lastname = l;
+    }
+
+    // getters
+    void Displayname()
+    {
+        cout << name << " " << lastname << endl;
+    }
+};
+
 int main()
 {
     Student std1;
-    std1.Set("Abhishek", "Jaiwwal");
+    std1.Set("Abhishek", "Jaiswal");
     std1.PrintName();
+
+    Employees emp1;
+    emp1.setName("akash");
+    emp1.setLastname("jaiswal");
+    emp1.Displayname();
+    return 0;
 }
