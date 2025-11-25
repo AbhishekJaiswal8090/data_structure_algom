@@ -60,6 +60,18 @@ public:
 };
 
 // => Copy constructor
+
+class Car
+{
+public:
+    string name;
+    string color;
+    Car(string name, string color)
+    {
+        this->name = name;
+        this->color = color;
+    }
+};
 int main()
 {
     Car car1("tata safari", "black");
@@ -68,4 +80,9 @@ int main()
     // mostly used for assigning value
     car1.Start();
     car1.IncreaseSpeed(100);
+
+    // Copy constructor
+    Car c1("Maruti 800", "black");
+    Car c2(c1);
+    cout << c2.name << " " << c2.color;
 }
