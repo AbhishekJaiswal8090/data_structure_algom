@@ -5,6 +5,8 @@ using namespace std;
 // Shallow copy => Shalow copy copies references to original array, but array remains same
 
 // Deep copy 
+// Deep copy created a brand new copy of array
+
 int main(){
 
 }
