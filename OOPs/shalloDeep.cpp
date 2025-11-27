@@ -7,6 +7,7 @@ using namespace std;
 // Deep copy 
 // Deep copy created a brand new copy of array
 
+// just like constructor we have destructor
 int main(){
 
 }
