@@ -33,11 +33,20 @@ public:
     }
 };
 
-// MOde of inheritnace 
-// => Public 
+// MOde of inheritnace
+// => Public
 // => Private
 //  => Protected
 
+
+// => private parent methodds cannot be accessed by derived class 
+
 int main()
 {
+    Fish f1;
+    cout << f1.fins << endl;
+    f1.breathe();
+    f1.eat();
+
+    return 0;
 }
