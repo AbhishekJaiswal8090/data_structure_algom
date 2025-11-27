@@ -1,6 +1,7 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-
+// Now we study Hierarchial inheritance
+int main()
+{
 }
