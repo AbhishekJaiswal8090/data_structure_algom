@@ -38,8 +38,8 @@ public:
 // => Private
 //  => Protected
 
-
-// => private parent methodds cannot be accessed by derived class 
+// => private parent methodds cannot be accessed by derived class
+// but protected parents method and attributes can be inherit by the derived class
 
 int main()
 {
