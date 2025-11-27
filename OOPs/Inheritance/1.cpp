@@ -33,6 +33,11 @@ public:
     }
 };
 
+// MOde of inheritnace 
+// => Public 
+// => Private
+//  => Protected
+
 int main()
 {
 }
