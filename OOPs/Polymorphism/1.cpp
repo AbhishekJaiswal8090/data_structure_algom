@@ -43,6 +43,16 @@ public:
     {
         cout << real << " + " << img << "i" << endl;
     }
+
+    // opeartor overloading
+    void operator+(Complex &c2)
+    {
+        int realRes = this->real + c2.real;
+        int imgRes = this->img + c2.img;
+        Complex c3(realRes, imgRes);
+        cout << "res= ";
+        c3.showNum();
+    }
 };
 
 int main()
@@ -55,6 +65,9 @@ int main()
     Complex num2(2, 4);
     num1.showNum();
     num2.showNum();
+
+    // operator overloading
+    num1 + num2;
 
     return 0;
 }
