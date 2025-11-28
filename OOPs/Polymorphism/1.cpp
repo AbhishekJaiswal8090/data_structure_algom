@@ -9,6 +9,10 @@ using namespace std;
 // Compile Time Polymorphism
 // run time polymorphiism
 
+// Compile time polymorphism
+// 1. Function overloading => we have multiple methods of same name but with different parameter type
+// 2.Opeartor overloading => 
+
 int main()
 {
 }
