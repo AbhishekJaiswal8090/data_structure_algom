@@ -26,11 +26,35 @@ public:
     }
 };
 
+// so this is how function ovcerloading works
+
+// 2.Opeartor overloading
+class Complex
+{
+public:
+    int real, img;
+    Complex(int n, int m)
+    {
+        real = n;
+        img = m;
+    }
+
+    void showNum()
+    {
+        cout << real << " + " << img << "i" << endl;
+    }
+};
+
 int main()
 {
     Print p1;
     p1.show(56);
     p1.show("abhi");
+
+    Complex num1(1, 2);
+    Complex num2(2, 4);
+    num1.showNum();
+    num2.showNum();
 
     return 0;
 }
