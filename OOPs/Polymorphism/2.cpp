@@ -27,6 +27,8 @@ public:
 
 int main()
 {
+    Parent par1;
+    par1.show();
     Child child1;
     child1.show();
 }
