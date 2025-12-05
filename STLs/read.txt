@@ -1,4 +1,5 @@
 STL IN C++
+STL = > STANDARD TEMPLATE LIBRARY
 STL is a collection of pre built classes and functions that make it easyto manage 
 data using common data structures like vectors , stacks and maps .
 It saves times and effort by providing ready to use efficient algorithms and 
@@ -15,3 +16,8 @@ to the requirements .
 
 INstead of wrirting your own data staructures , STL provides ready made 
 containers.
+
+Iterators are more like the pointers they point to a specific position
+They are also used to iterate over STLs 
+auto is a Keyword used for its declaration
+

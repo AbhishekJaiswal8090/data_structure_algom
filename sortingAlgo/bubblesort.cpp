@@ -10,6 +10,7 @@ void PrintSorted(int *arr, int n)
         cout << arr[i] << ",";
     }
 }
+
 // ascending order
 void BubbleSort(int *arr, int n)
 {

@@ -31,8 +31,7 @@ void InsertionSort(int arr[], int n)
 int main()
 {
 
-    int arr[]= {3,6,1,2,9};
-    int n=sizeof(arr)/sizeof(int);
-    InsertionSort(arr,n);
-    
+    int arr[] = {3, 6, 1, 2, 9};
+    int n = sizeof(arr) / sizeof(int);
+    InsertionSort(arr, n);
 }

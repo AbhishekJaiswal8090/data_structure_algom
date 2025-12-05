@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-// IN-BUILD SORTING METHOD TECHNIQUES
+// IN-BUILt SORTING METHOD TECHNIQUES
 
 // Ascending order
 // sort(start ,end);

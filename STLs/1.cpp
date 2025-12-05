@@ -179,7 +179,7 @@ void Stack()
 // queue is a data structure that used FIFO order
 // it means the one ehich gets first will be the one to get out
 // to use queue we need to use the queue header file first
-// in queue we can on;y access element from either front or either
+// in queue we can only access element from either front or either
 
 void Queue()
 {
@@ -269,10 +269,10 @@ void Set()
 // maps in data structure is widely know for its compatability with
 // both key and values , it is used for storing key value pairs
 // it helps in reducing time complexity from 0(n^2) to 0(n)
+// mostly used for counting frequencies , soring some values
 
 void Map()
 {
-    
 }
 
 int main()
