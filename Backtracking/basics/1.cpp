@@ -25,10 +25,10 @@ void changeArr(vector<int> &arr, int i, int n)
         PrintArr(arr, n);
         return;
     }
-    int old = arr[i];
+
     arr[i] = i + 1;
     changeArr(arr, i + 1, n); // recurse to next index
-    arr[i] = old;             // restore previous value (backtrack)
+    arr[i] -= 2;              // restore previous value (backtrack)
 }
 
 int main()
@@ -37,5 +37,6 @@ int main()
     // backtracking on arrays
     vector<int> arr = {1, 2, 3, 4, 5};
     changeArr(arr, 0, 5);
+    PrintArr(arr, 5);
     return 0;
 }
