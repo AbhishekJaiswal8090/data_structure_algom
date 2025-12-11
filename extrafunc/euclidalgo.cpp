@@ -27,7 +27,7 @@ int main()
 {
 
     int and = EuclideAlgo(40, 45);
-    cout << ans << endl;
+    cout << and << endl;
 }
 
 // in case of calculating more than two numbers what we would fo is
