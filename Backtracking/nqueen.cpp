@@ -32,6 +32,14 @@ void chessBoard(vector<vector<char>> &board, int n)
     }
 }
 
+bool isSafe(vector<vector<char>> &board, int row, int j)
+{
+    if (board[row][j] == 'Q')
+    {
+        return false;
+    }
+}
+
 void nQueens(vector<vector<char>> &board, int row)
 {
     int n = board.size();
