@@ -42,4 +42,11 @@ int main()
     }
 
     cout << "Total maximum activity: " << ans.size() << endl;
+
+    for (int i = 0; i < ans.size(); i++)
+    {
+        cout << ans[i].first << ans[i].second << endl;
+    }
+
+    return 0;
 }
