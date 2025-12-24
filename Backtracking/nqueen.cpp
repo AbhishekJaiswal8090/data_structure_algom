@@ -4,6 +4,7 @@ using namespace std;
 
 // n queen problem
 
+// Printing chessboard
 void PrintChessBoard(vector<vector<char>> &board, int n)
 {
     for (int i = 0; i < n; i++)
@@ -18,6 +19,7 @@ void PrintChessBoard(vector<vector<char>> &board, int n)
     cout << "...............\n";
 }
 
+// making the chessbaord initially with empty board
 void chessBoard(vector<vector<char>> &board, int n)
 {
 
@@ -32,6 +34,7 @@ void chessBoard(vector<vector<char>> &board, int n)
     }
 }
 
+// checking if current position is safe for the queen or not
 bool isSafe(vector<vector<char>> &board, int row, int j)
 {
     int n = board.size();
@@ -84,6 +87,8 @@ bool isSafe(vector<vector<char>> &board, int row, int j)
     return true;
 }
 
+// Heres the main logic of the soln
+// setting the position of thr queen if it is safe and if not backtrack
 void nQueens(vector<vector<char>> &board, int row)
 {
     int n = board.size();

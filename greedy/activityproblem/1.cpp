@@ -3,50 +3,37 @@
 #include <algorithm>
 using namespace std;
 
-// Activity selection
-// Select the max no of activities that can be perforemed
-// by a single person (a person can work on one activity at a time)
-
 int main()
 {
-    int na; // number of activites
+    int na;
     cin >> na;
 
     vector<pair<int, int>> activity(na);
     for (int i = 0; i < na; i++)
     {
-        cin >> activity[i].first >> activity[i].second;
+        cin >> activity[i].first >> activity[i].second; // start, finish
     }
 
-    // after than we will sort the given activity based on finish time
-    // because finishing early leaves you more space for more activity
+    // Sort by finish time
+    sort(activity.begin(), activity.end(),
+         [](auto &a, auto &b)
+         { return a.second < b.second; });
 
-    vector<pair<int, int>> a(an);
-    for (int i = 0; i < an; i++)
+    int lastfinish = -1;
+    vector<pair<int, int>> ans;
+
+    for (int i = 0; i < na; i++)
     {
-        a[i].first = activity[i].second;
-        a[i].second = activity[i].first;
-    }
-
-    sort(a.begin(), a.end());
-
-    int lastfinish = 0;
-    vector<pair<int>> ans;
-    for (int i = 0; i < an; i++)
-    {
-        if (a[i].first > lastfinish)
+        if (activity[i].first > lastfinish)
         {
-            ans.push_back({a[i].second, a[i].first});
-            lastfinish = a[i].first;
+            ans.push_back(activity[i]);
+            lastfinish = activity[i].second;
         }
     }
 
     cout << "Total maximum activity: " << ans.size() << endl;
-
-    for (int i = 0; i < ans.size(); i++)
+    for (auto &act : ans)
     {
-        cout << ans[i].first << ans[i].second << endl;
+        cout << act.first << " " << act.second << endl;
     }
-
-    return 0;
 }
