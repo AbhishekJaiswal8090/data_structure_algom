@@ -175,6 +175,38 @@ void Stack()
     // checking if stack is empty
     cout << mystack.empty() << endl;
 }
+// stack implementation using vector
+class Stackk
+{
+public:
+    vector<int> vec;
+    void push(int element)
+    {
+        vec.push_back(element);
+    }
+    void pop()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is empty" << endl;
+        }
+        vec.pop_back();
+    }
+    int top()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is empty " << endl;
+            return 0;
+        }
+        int lstIdx = vec.size() - 1;
+        return vec[lstIdx];
+    }
+    bool isEmpty()
+    {
+        return vec.size() == 0;
+    }
+}
 
 // queue is a data structure that used FIFO order
 // it means the one ehich gets first will be the one to get out
@@ -284,6 +316,11 @@ int main()
     // Deque();
     // Stack();
     Queue();
+
+    Stackk s;
+    s.push(90);
+    s.push(90);
+    s.push(90);
 
     return 0;
 }
