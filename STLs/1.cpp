@@ -223,6 +223,24 @@ void pushFunc(int element, stack<int> &mystack)
     pushFunc(element, mystack);
     mystack.push(el);
 }
+// reversing an string using stack
+void reverseString()
+{
+    stack<char> mystack;
+    string s = "ABHISHEK";
+    for (char c : s)
+    {
+        mystack.push(c);
+    }
+    string ans = "";
+    while (!mystack.empty())
+    {
+        char temp = mystack.top();
+        ans += temp;
+        mystack.pop();
+    }
+    cout << ans << endl;
+}
 // queue is a data structure that used FIFO order
 // it means the one ehich gets first will be the one to get out
 // to use queue we need to use the queue header file first
