@@ -208,6 +208,21 @@ public:
     }
 }
 
+// insertion in stack at the bottom
+
+// Insert element at bottom of stack using recursuion
+void pushFunc(int element, stack<int> &mystack)
+{
+    if (mystack.empty())
+    {
+        mystack.push(element);
+        return;
+    }
+    int el = mystack.top();
+    mystack.pop();
+    pushFunc(element, mystack);
+    mystack.push(el);
+}
 // queue is a data structure that used FIFO order
 // it means the one ehich gets first will be the one to get out
 // to use queue we need to use the queue header file first
