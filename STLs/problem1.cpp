@@ -1,9 +1,13 @@
-
 #include <iostream>
 #include <vector>
 #include <bits/stdc++.h>
 using namespace std;
 
+// SOLVING THE PROBLEM NEXT GREATER ELEMNT
+// appraoch is simple starting form the lasst ellemnt push it to the stack
+// and ccompare the top element of the stack to the current elelemnt of list
+// if it is small pop the element else it would be answer for that particular list elelemnt
+// and everuytime push the every el;ement to the stack
 vector<int> NextGreaterElement(vector<int> &vec)
 {
     int n = vec.size();
