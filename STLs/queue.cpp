@@ -10,7 +10,12 @@ using namespace std;
 // insertion takes place by front
 // deletion takes place by rear
 
+// it has thrree main methods 
+// 1-> push
+// 2-> pop
+// 3-> front
 
+// all takes coonstant time to perform operation
 int main()
 {
 }
