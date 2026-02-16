@@ -5,12 +5,12 @@ using namespace std;
 // queue is a data structure which follows FIFO pattern
 // FIRST IN FIRST OUT
 
-// it has two parts 
+// it has two parts
 // front and Rear
-// insertion takes place by front
-// deletion takes place by rear
+// insertion takes place by rear
+// deletion takes place by front
 
-// it has thrree main methods 
+// it has thrree main methods
 // 1-> push
 // 2-> pop
 // 3-> front
@@ -18,5 +18,4 @@ using namespace std;
 // all takes coonstant time to perform operation
 int main()
 {
-    
 }
