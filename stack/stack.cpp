@@ -1,3 +1,8 @@
+#include<iostream>
+#include<vector>
+#include<stack>
+using namespace std;
+
 // stack implementation using vector
 class Stackk
 {
