@@ -25,7 +25,7 @@ class Queue
     int size;
 
 public:
-    settingqueue(int c)
+    Queue(int c)
     {
 
         capacity = c;
@@ -34,18 +34,12 @@ public:
     }
     bool isEmpty()
     {
-        if (arr.size() == 0)
-            return true;
-        else
-            return false;
+        return size == 0;
     }
 
     bool isFull()
     {
-        if (arr.size() == capacity)
-            return true;
-        else
-            return false;
+        return size == capacity;
     }
     int enqueue(int ele)
     {
@@ -79,7 +73,7 @@ public:
         return arr[0];
     }
 
-    int getPeek()
+    int getRear()
     {
         if (isEmpty())
         {
@@ -91,4 +85,18 @@ public:
 };
 int main()
 {
+    Queue q(3);
+
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    cout << "Front: " << q.getFront() << endl;
+
+    q.dequeue();
+    cout << "Front: " << q.getFront() << endl;
+    cout << "Rear: " << q.getRear() << endl;
+
+    q.enqueue(40);
+
+    return 0;
 }
