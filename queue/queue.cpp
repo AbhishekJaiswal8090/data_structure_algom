@@ -16,7 +16,79 @@ using namespace std;
 // 3-> front
 
 // all takes coonstant time to perform operation
+
+// lets implement an queue using array
+class Queue
+{
+    int *arr;
+    int capacity;
+    int size;
+
+public:
+    settingqueue(int c)
+    {
+
+        capacity = c;
+        arr = new int[capacity];
+        size = 0;
+    }
+    bool isEmpty()
+    {
+        if (arr.size() == 0)
+            return true;
+        else
+            return false;
+    }
+
+    bool isFull()
+    {
+        if (arr.size() == capacity)
+            return true;
+        else
+            return false;
+    }
+    int enqueue(int ele)
+    {
+        if (isFull())
+        {
+            cout << "Queue Overflowed" << "\n";
+            return -1;
+        }
+        arr[size++] = ele;
+    }
+    int dequeue()
+    {
+        if (isEmpty())
+        {
+            cout << "Queue underflowed " << "\n";
+            return -1;
+        }
+        for (int i = 1; i < size; i++)
+        {
+            arr[i - 1] = arr[i];
+        }
+        size--;
+    }
+    int getFront()
+    {
+        if (isEmpty())
+        {
+            cout << "Queue is empty";
+            return -1;
+        }
+        return arr[0];
+    }
+
+    int getPeek()
+    {
+        if (isEmpty())
+        {
+            cout << "Queue is Empty";
+            return -1;
+        }
+        return arr[size - 1];
+    }
+};
 int main()
 {
-    
 }
