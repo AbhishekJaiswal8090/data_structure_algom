@@ -10,8 +10,7 @@ class CircularQueue
     int *arr;
     int capacity;
     int size;
-    int ptr1;
-    int ptr2;
+    int front;
 
 public:
     CircularQueue(int c)
@@ -19,8 +18,7 @@ public:
         capacity = c;
         arr = new int[capacity];
         size = 0;
-        ptr1 = arr[size];
-        ptr2 = arr[size];
+        front = 0;
     }
     bool isEmpty()
     {
@@ -30,25 +28,21 @@ public:
     {
         return size == capacity;
     }
-    int Enqueue(int ele)
+    void push(int ele)
     {
         if (isFull())
         {
             cout << "Overflowed";
-            return -1;
         }
-        arr[ptr2] = ele;
-        ptr2 = (ptr2 + 1) % capacity;
+        int rear = (front + size) % capacity;
     }
-    int Dequeue()
+    int pop()
     {
         if (isEmpty())
         {
             cout << "Underflowed";
             return -1;
         }
-        arr[ptr1] = 0;
-        ptr1 = (ptr1 + 1) % capacity;
     }
 
 }
