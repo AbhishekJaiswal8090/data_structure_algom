@@ -35,6 +35,8 @@ public:
             cout << "Overflowed";
         }
         int rear = (front + size) % capacity;
+        size++;
+        arr[rear] = ele;
     }
     int pop()
     {
@@ -43,11 +45,13 @@ public:
             cout << "Underflowed";
             return -1;
         }
+        int res = arr[front];
+        front = (front + 1) % capacity;
+        size--;
+        return res;
     }
+};
 
-}
-
-int
-main()
+int main()
 {
 }
