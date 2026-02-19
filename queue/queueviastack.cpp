@@ -4,6 +4,12 @@ using namespace std;
 
 // in this lecture wew are going to study implementing queue using two stack;
 
+// here we are implementing queue property using stack;
+// what we are doing here is simple
+// we have two stack s1 and s2;
+// and each time during pushing element we shift all the data of stack 1 to stack 2
+// and then push the elelement into the stack 1 and then after shift all the data of stack2 into stack 1
+
 class Queue
 {
 
