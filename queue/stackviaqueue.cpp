@@ -3,7 +3,7 @@
 using namespace std;
 
 // #stack using two queues
-
+// the process is the same as the implementing queue using 2 stack;
 class Stack
 {
     queue<int> q1;
