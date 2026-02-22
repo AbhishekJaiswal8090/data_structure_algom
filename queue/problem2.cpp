@@ -2,6 +2,11 @@
 #include <queue>
 using namespace std;
 
+// queue interleave problem
+
+// THe question states that we have even size queue and task is to make the such queue that the fisrt half elelemnts
+// and second half elelments shows up alernatively
+
 int main()
 {
     queue<int> q;
