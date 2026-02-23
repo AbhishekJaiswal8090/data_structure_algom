@@ -5,6 +5,10 @@ using namespace std;
 // The most complicated data strcuture
 // Which is Hierarchial Data Structure
 
+// Binary tree is a non linear data structure which
+// generally have only two nodes 
+// THey can be called as Child node
+
 int main(){
 
 }
