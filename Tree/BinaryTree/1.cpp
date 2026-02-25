@@ -25,25 +25,23 @@ public:
     }
 };
 
-static int idx;
-
-Node *BuildNode(vector<int> nodes)
+Node *BuildNode(vector<int> &nodes, int &idx)
 {
-    idx++;
-    if (nodes[idx] == -1)
+    if (idx >= nodes.size() || nodes[idx] == -1)
     {
+        idx++;
         return NULL;
     }
-    Node *currNode = new Node(nodes[idx]);
-    currNode->left = BuildNode(nodes);
-    currNode->right = BuildNode(nodes);
-
+    Node *currNode = new Node(nodes[idx++]);
+    currNode->left = BuildNode(nodes, idx);
+    currNode->right = BuildNode(nodes, idx);
     return currNode;
 }
 
 int main()
 {
-    vector<int> nodes;
-    Node *root = BuildNode(nodes);
-    cout << "root node is" << root << endl;
+    vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, 3, -1, 6, -1, -1};
+    int idx = 0;
+    Node *root = BuildNode(nodes, idx);
+    cout << "root node is " << root->data << endl;
 }
