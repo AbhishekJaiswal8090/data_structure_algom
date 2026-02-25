@@ -35,8 +35,15 @@ Node *BuildNode(vector<int> nodes)
         return NULL;
     }
     Node *currNode = new Node(nodes[idx]);
+    currNode->left = BuildNode(nodes);
+    currNode->right = BuildNode(nodes);
+
+    return currNode;
 }
 
 int main()
 {
+    vector<int> nodes;
+    Node *root = BuildNode(nodes);
+    cout << "root node is" << root << endl;
 }
