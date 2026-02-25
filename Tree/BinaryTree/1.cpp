@@ -25,9 +25,16 @@ public:
     }
 };
 
+static int idx;
+
 Node *BuildNode(vector<int> nodes)
 {
-    
+    idx++;
+    if (nodes[idx] == -1)
+    {
+        return NULL;
+    }
+    Node *currNode = new Node(nodes[idx]);
 }
 
 int main()
