@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 // In today lecture we are going to study tree
@@ -6,9 +6,9 @@ using namespace std;
 // Which is Hierarchial Data Structure
 
 // Binary tree is a non linear data structure which
-// generally have only two nodes 
+// generally have at max two nodes
 // THey can be called as Child node
 
-int main(){
-
+int main()
+{
 }
