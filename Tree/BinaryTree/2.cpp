@@ -30,7 +30,7 @@ Node *BuildNode(vector<int> &nodes, int &idx)
     return currNode;
 }
 
-// Traversal code
+// PreOrder Traversal code
 void PreorderTraversal(Node *root)
 {
     if (root == NULL)
@@ -41,6 +41,18 @@ void PreorderTraversal(Node *root)
     PreorderTraversal(root->left);
     PreorderTraversal(root->right);
 }
+
+// Inorder Traversal code
+void InorderTraversal(Node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    InorderTraversal(root->left);
+    cout << root->data << " ";
+    PreorderTraversal(root->right);
+}
 int main()
 {
     vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, 3, -1, 6, -1, -1};
@@ -49,4 +61,5 @@ int main()
     // cout << "root node is " << root->data << endl;
     PreorderTraversal(root);
     cout << endl;
+    InorderTraversal(root);
 }
