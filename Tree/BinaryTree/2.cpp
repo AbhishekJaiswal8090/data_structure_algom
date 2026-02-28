@@ -3,9 +3,14 @@
 using namespace std;
 
 // Today we are going to study Traversal using Depth First Search
-// Which simplifies the traversal by visiting to the depth level
 
-// In this lecture we are going to study Preorder Traversal
+// Traversal divindes into two types
+// dfs BFS
+// DFS simplifies the traversal by visiting to the depth level
+// BFS Traverse elements level by level
+
+// While DFS includes diff kinds of traversal methods
+// Preorder Inorder Postorder
 
 class Node
 {
@@ -33,7 +38,7 @@ Node *BuildNode(vector<int> &nodes, int &idx)
     return currNode;
 }
 
-// PreOrder Traversal code
+// PreOrder Traversal
 void PreorderTraversal(Node *root)
 {
     if (root == NULL)
@@ -45,7 +50,7 @@ void PreorderTraversal(Node *root)
     PreorderTraversal(root->right);
 }
 
-// Inorder Traversal code
+// Inorder Traversal
 void InorderTraversal(Node *root)
 {
     if (root == NULL)
