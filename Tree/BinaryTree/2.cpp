@@ -2,8 +2,8 @@
 #include <vector>
 using namespace std;
 
-// Today we are going to study Traversal using Depth First Search 
-// Which 
+// Today we are going to study Traversal using Depth First Search
+// Which simplifies the traversal by visiting to the depth level
 
 // In this lecture we are going to study Preorder Traversal
 
