@@ -23,8 +23,8 @@ int sum(int a, int b = 1)
 }
 
 // Default parameters
-// are the values in which case if the user doesn't pass the argument to that
-// parameter so this parameter is being used
+// are the values in which case if the user doesn't pass the argument to that called function
+//  so this parameter is being used
 
 int diff(int a, int b)
 {
@@ -134,7 +134,7 @@ void allPrime(int n)
 // checking if a num is Palindrome or not
 void Palindrome(int n)
 {
-   int original =n;
+   int original = n;
    int reversed_num = 0;
    while (n > 0)
    {
@@ -145,8 +145,10 @@ void Palindrome(int n)
    if (original == reversed_num)
    {
       cout << "Num is Palindrome \n";
-   }else{
-      cout<<"Num is not Palindrome \n";
+   }
+   else
+   {
+      cout << "Num is not Palindrome \n";
    }
 }
 // === Scope ===

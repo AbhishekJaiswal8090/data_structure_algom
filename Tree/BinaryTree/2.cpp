@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+// Today we are going to study Traversal using Depth First Search 
+// Which 
+
 // In this lecture we are going to study Preorder Traversal
 
 class Node
@@ -19,7 +22,7 @@ public:
 
 Node *BuildNode(vector<int> &nodes, int &idx)
 {
-    if (idx >= nodes.size() || nodes[idx] == -1)
+    if (nodes[idx] == -1)
     {
         idx++;
         return NULL;
@@ -51,8 +54,22 @@ void InorderTraversal(Node *root)
     }
     InorderTraversal(root->left);
     cout << root->data << " ";
-    PreorderTraversal(root->right);
+    InorderTraversal(root->right);
 }
+
+// Postorder traversal
+void PostOrder(Node *root)
+{
+    if (root = NULL)
+    {
+        return;
+    }
+
+    PostOrder(root->left);
+    PostOrder(root->right);
+    cout << root->data << " ";
+}
+
 int main()
 {
     vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, 3, -1, 6, -1, -1};
