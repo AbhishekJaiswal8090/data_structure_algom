@@ -28,7 +28,7 @@ public:
 
 Node *BuildNode(vector<int> &nodes, int &idx)
 {
-    if (idx >= nodes.size() || nodes[idx] == -1)
+    if (nodes[idx] == -1)
     {
         idx++;
         return NULL;

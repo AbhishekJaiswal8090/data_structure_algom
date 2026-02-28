@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
 
 // Today we are going to study BFS
@@ -23,6 +24,7 @@ Node *BuildNode(vector<int> &nodes, int &idx)
 {
     if (nodes[idx] == -1)
     {
+        idx++;
         return NULL;
     }
 
@@ -33,7 +35,30 @@ Node *BuildNode(vector<int> &nodes, int &idx)
 }
 
 // Level Order Traversal
-
+void LevelOrderTraversal(Node *root)
+{
+    if (root == NULL)
+        return;
+    queue<Node *> q;
+    q.push(root);
+    while (!q.empty())
+    {
+        if (root->left != NULL)
+        {
+            q.push(root->left);
+        }
+        if (root->right != NULL)
+        {
+            q.push(root->right);
+        }
+        cout << q.front() << " ";
+        q.pop();
+    }
+}
 int main()
 {
+    int idx = 0;
+    vector<int> nodes = {1, 2, 4, 5, 3, 6, 7};
+    Node *root = BuildNode(nodes, idx);
+    LevelOrderTraversal(root);
 }
