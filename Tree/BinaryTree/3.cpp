@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <queue>
 using namespace std;
 
@@ -20,17 +19,16 @@ public:
     }
 };
 
-Node *BuildNode(vector<int> &nodes, int &idx)
+Node *BuildNode(int nodes[], int size, int idx)
 {
-    if (nodes[idx] == -1)
+    if (idx >= size || nodes[idx] == -1)
     {
-        idx++;
         return NULL;
     }
 
-    Node *currNode = new Node(nodes[idx++]);
-    currNode->left = BuildNode(nodes[idx], idx);
-    currNode->right = BuildNode(nodes[idx], idx);
+    Node *currNode = new Node(nodes[idx]);
+    currNode->left = BuildNode(nodes, size, 2 * idx + 1);
+    currNode->right = BuildNode(nodes, size, 2 * idx + 2);
     return currNode;
 }
 
@@ -43,22 +41,25 @@ void LevelOrderTraversal(Node *root)
     q.push(root);
     while (!q.empty())
     {
-        if (root->left != NULL)
-        {
-            q.push(root->left);
-        }
-        if (root->right != NULL)
-        {
-            q.push(root->right);
-        }
-        cout << q.front() << " ";
+        Node *current = q.front();
         q.pop();
+        cout << current->data << " ";
+        if (current->left != NULL)
+        {
+            q.push(current->left);
+        }
+        if (current->right != NULL)
+        {
+            q.push(current->right);
+        }
     }
 }
 int main()
 {
-    int idx = 0;
-    vector<int> nodes = {1, 2, 4, 5, 3, 6, 7};
-    Node *root = BuildNode(nodes, idx);
+    int nodes[] = {1, 2, 4, 5, 3, 6, 7};
+    int size = 7;
+    Node *root = BuildNode(nodes, size, 0);
     LevelOrderTraversal(root);
+    cout << endl;
+    return 0;
 }
