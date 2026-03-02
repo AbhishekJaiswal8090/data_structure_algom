@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-// In today lecture we are going to study counting nodes of thew tree
+// In today lecture we are going to study counting nodes of the tree
 
 class Node
 {

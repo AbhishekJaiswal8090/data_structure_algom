@@ -20,6 +20,7 @@ Node *BuildNode(vector<int> &nodes, int &idx)
 {
     if (nodes[idx] == -1)
     {
+        idx++;
         return NULL;
     }
     Node *currNode = new Node(nodes[idx++]);
@@ -37,6 +38,7 @@ int Sum(Node *root)
 
     int leftSum = Sum(root->left);
     int RightSum = Sum(root->right);
+    cout << "Sum :" << leftSum + RightSum + root->data << endl;
     return leftSum + RightSum + root->data;
 }
 
