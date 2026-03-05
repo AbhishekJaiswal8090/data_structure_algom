@@ -42,6 +42,10 @@ int Height(Node *root)
     return currHeight;
 }
 
+int Diameter(Node* root){
+    
+}
+
 int main()
 {
 }
