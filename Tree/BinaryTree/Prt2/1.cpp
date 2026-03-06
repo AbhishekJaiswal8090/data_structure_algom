@@ -42,10 +42,21 @@ int Height(Node *root)
     return currHeight;
 }
 
-int Diameter(Node* root){
-    
+int Diameter(Node *root)
+{
+    int rh = Height(root->left) + Height(root->right) + 1;
+    int lsh = Diameter(root->left);
+    int rsh = Diameter(root->right);
+
+    int ans = max(rh, max(lsh, rsh));
+    return ans;
 }
 
 int main()
 {
+    vector<int> nodes = {1, 2, 4, 5, -1, -1, 6, -1, 7, -1, -1, -1, 3, -1, -1};
+    int idx = 0;
+    Node *root = BuildNode(nodes, idx);
+    int ans = Diameter(root);
+    cout << ans << endl;
 }
