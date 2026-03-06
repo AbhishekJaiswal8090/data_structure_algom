@@ -39,11 +39,15 @@ int Height(Node *root)
     int lh = Height(root->left);
     int rh = Height(root->right);
     int currHeight = max(lh, rh);
-    return currHeight;
+    return currHeight + 1;
 }
 
 int Diameter(Node *root)
 {
+    if (root == NULL)
+    {
+        return 0;
+    }
     int rh = Height(root->left) + Height(root->right) + 1;
     int lsh = Diameter(root->left);
     int rsh = Diameter(root->right);
