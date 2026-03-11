@@ -46,6 +46,7 @@ int Diameter(Node *root)
 {
     if (root == NULL)
     {
+
         return 0;
     }
     int rh = Height(root->left) + Height(root->right) + 1;
