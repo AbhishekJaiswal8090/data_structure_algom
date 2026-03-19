@@ -49,11 +49,11 @@ int Diameter(Node *root)
 
         return 0;
     }
-    int rh = Height(root->left) + Height(root->right) + 1;
-    int lsh = Diameter(root->left);
-    int rsh = Diameter(root->right);
+    int cd = Height(root->left) + Height(root->right) + 1;
+    int ld = Diameter(root->left);
+    int rd = Diameter(root->right);
 
-    int ans = max(rh, max(lsh, rsh));
+    int ans = max(cd, max(ld, rd));
     return ans;
 }
 
