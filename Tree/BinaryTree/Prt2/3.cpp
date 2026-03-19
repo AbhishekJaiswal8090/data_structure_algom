@@ -51,9 +51,7 @@ bool isIdentical(Node *root1, Node *root2)
         return false;
     }
 
-    if (root1)
-
-        return isIdentical(root1->left, root2->left) && isIdentical(root1->right, root2->right);
+    return isIdentical(root1->left, root2->left) && isIdentical(root1->right, root2->right);
 }
 bool isSubtree(Node *root, Node *subroot)
 {
