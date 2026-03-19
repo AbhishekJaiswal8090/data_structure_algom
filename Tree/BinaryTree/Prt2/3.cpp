@@ -1,4 +1,5 @@
-#include <iosteram>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 // in this leacture we are going to solve the problem
@@ -19,12 +20,13 @@ public:
     }
 };
 
-Node *BuildNode(vector<int> &nodes, int &idx)
+Node *BuildNode(const vector<int> &nodes, int &idx)
 {
-    if (nodes[idx] == NULL)
+
+    if (nodes[idx] == -1)
     {
         idx++;
-        return NULL;
+        return nullptr;
     }
     Node *currNode = new Node(nodes[idx++]);
     currNode->left = BuildNode(nodes, idx);
@@ -32,6 +34,27 @@ Node *BuildNode(vector<int> &nodes, int &idx)
     return currNode;
 }
 
+bool isIdentical(Node *root1, Node *root2)
+{
+
+    if (root1 == NULL && root2 == NULL)
+    {
+        return true;
+    }
+    if ((root1 == NULL && root2 != NULL) || root1 != NULL && root2 == NULL)
+    {
+        return false;
+    }
+
+    if (root1->data != root2->data)
+    {
+        return false;
+    }
+
+    if (root1)
+
+        return isIdentical(root1->left, root2->left) && isIdentical(root1->right, root2->right);
+}
 bool isSubtree(Node *root, Node *subroot)
 {
     if (root == NULL && subroot == NULL)
@@ -44,9 +67,11 @@ bool isSubtree(Node *root, Node *subroot)
     }
     if (root->data == subroot->data)
     {
+        if (isIdentical(root, subroot))
+            return true;
     }
-    int isSubTree = isSubtree(root->left, subtroot);
-    if (!isSubTree)
+    bool isinSubtree = isSubtree(root->left, subroot);
+    if (!isinSubtree)
     {
         return isSubtree(root->right, subroot);
     }
@@ -56,4 +81,15 @@ bool isSubtree(Node *root, Node *subroot)
 
 int main()
 {
+    int idx = 0;
+
+    vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+    Node *root = BuildNode(nodes, idx);
+
+    Node *subroot = new Node(2);
+    subroot->left = new Node(4);
+    subroot->right = new Node(5);
+
+    cout << isSubtree(root, subroot) << endl;
+    return 0;
 }
