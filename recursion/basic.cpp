@@ -3,7 +3,7 @@
 using namespace std;
 
 // recursion
-// when a function repeatedly call itself
+// when a function repeatedly call itself and have base case inside of it to terminate the process when needed
 
 // a function with no base case
 // void func()
