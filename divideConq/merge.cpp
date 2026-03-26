@@ -5,7 +5,8 @@ using namespace std;
 
 // Divide and Conquer
 // merge sort
-
+// Merge sort is an algorithm used to sort the element using divide and conquer technique ,
+// It continously breaks the elements and into tiny parts and sort them
 void PrintArr(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
