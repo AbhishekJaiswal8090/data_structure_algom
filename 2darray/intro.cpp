@@ -2,6 +2,8 @@
 using namespace std;
 
 // 2D ARRAYS
+// IN this lecture we are going to study 2d arrays basically a matrix
+// consist of some rows and colm
 
 int main()
 {
