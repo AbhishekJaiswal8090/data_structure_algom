@@ -65,7 +65,7 @@ void InorderTraversal(Node *root)
 // Postorder traversal
 void PostOrder(Node *root)
 {
-    if (root = NULL)
+    if (root == NULL)
     {
         return;
     }
@@ -84,4 +84,7 @@ int main()
     PreorderTraversal(root);
     cout << endl;
     InorderTraversal(root);
+    cout << endl;
+    PostOrder(root);
+    cout << endl;
 }
