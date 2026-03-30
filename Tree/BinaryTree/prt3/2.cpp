@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+// IN today lecture we are going to study and solve the problem Lowest Common Ancestor
+// We will solve it using two aproaches
+// This apprach reuires o(n) Time complexity and o(n) space cmplexity
 class Node
 {
 public:
