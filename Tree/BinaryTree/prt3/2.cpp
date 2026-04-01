@@ -47,14 +47,11 @@ bool calculatePath(Node *root, vector<int> &path, int n)
         return true;
     }
 
-    int left = calculatePath(root->left, path, n);
-    int right = calculatePath(root->right, path, n);
+    bool left = calculatePath(root->left, path, n);
+    bool right = calculatePath(root->right, path, n);
 
     if (left || right)
         return true;
-
-    if (!left && !right)
-        return false;
 
     path.pop_back();
     return false;

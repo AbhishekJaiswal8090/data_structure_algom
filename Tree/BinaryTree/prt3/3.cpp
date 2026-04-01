@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Node
@@ -28,6 +29,10 @@ Node *BuildNode(vector<int> &nodes, int &idx)
 
     return currNode;
 }
+
+// IN this lecture we are going to study about the second approach for the problem Lowest Commom Ancestor
+// Beacause if you notice the first approach time complexity is o(n) and while space complexity is also o(n)
+// So in this lecture we are going to find a solution which works on time compleixity o(n) while reducing space complexity to o(1)
 
 int main()
 {
