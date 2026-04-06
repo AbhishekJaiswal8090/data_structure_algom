@@ -8,6 +8,7 @@ using namespace std;
 // the min distance bw two nodes goes from the lca of those two nodes
 // So our aprroach is simple we are going to calculate the distance from lca to first node and then distance from lca to second node and
 // by adding it we'lll get our answer
+
 class Node
 {
 public:
@@ -68,10 +69,49 @@ Node *Lca(Node *root, int n1, int n2)
     }
 }
 
-int minDist(Node *root, Node *p, Node *q)
+int Dist(Node *root, int p)
 {
+    if (root == nullptr)
+    {
+        return -1;
+    }
+    if (root->data == p)
+    {
+        return 0;
+    }
+
+    int leftDist = Dist(root->left, p);
+    if (leftDist != -1)
+    {
+        return leftDist + 1;
+    }
+
+    int rightDist = Dist(root->right, p);
+    if (rightDist)
+    {
+        return rightDist + 1;
+    }
+
+    return -1;
+}
+
+int minDist(Node *root, int p, int q)
+{
+    Node *lca = Lca(root, p, q);
+    int dist1 = Dist(lca, p);
+    int dist2 = Dist(lca, q);
+    cout << dist1 + dist2
+         << endl;
+    return dist1 + dist2;
 }
 
 int main()
 {
+    vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+    int idx = 0;
+    Node *root = BuildNode(nodes, idx);
+
+    int n1 = 4;
+    int n2 = 6;
+    minDist(root, n1, n2);
 }
