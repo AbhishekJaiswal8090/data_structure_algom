@@ -39,7 +39,7 @@ bool calculatePath(Node *root, vector<int> &path, int n)
     if (root == NULL)
     {
         return false;
-        ;
+        
     }
     path.push_back(root->data);
     if (root->data == n)

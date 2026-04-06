@@ -12,7 +12,7 @@ using namespace std;
 
 // Lets start coding
 
-// IMplementing Tree from Preorder
+// IMplementing Tree in Preorder
 class Node
 {
 public:
