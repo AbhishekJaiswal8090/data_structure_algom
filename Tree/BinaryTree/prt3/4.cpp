@@ -4,6 +4,10 @@ using namespace std;
 
 // IN this lecture we are going to study
 // to find out the minimum distance bw two nodes
+// From the above lecture we can say that the
+// the min distance bw two nodes goes from the lca of those two nodes
+// So our aprroach is simple we are going to calculate the distance from lca to first node and then distance from lca to second node and
+// by adding it we'lll get our answer
 class Node
 {
 public:
