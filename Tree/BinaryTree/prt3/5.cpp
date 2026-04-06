@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // In this leture we are going to study about the problem
@@ -36,10 +37,41 @@ Node *BuildNode(vector<int> &nodes, int &idx)
     return currNode;
 }
 
-void KthAncestor(Node *root, int node, int k)
+int KthAncestor(Node *root, int node, int k)
 {
+    if (root == nullptr)
+    {
+        return -1;
+    }
+    if (root->data == node)
+    {
+        return 0;
+    }
+
+    int left = KthAncestor(root->left, node, k);
+    int right = KthAncestor(root->right, node, k);
+
+    if (left == -1 && right == -1)
+    {
+        return -1;
+    }
+
+    int distance = (left == -1 ? right : left) + 1;
+    if (distance == k)
+    {
+        cout << "kth ancestor is :" << root->data << endl;
+        return -1; // stop further propagation after printing
+    }
+
+    return distance;
 }
 
 int main()
 {
+    vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+    int idx = 0;
+    Node *root = BuildNode(nodes, idx);
+
+    int node = 5, k = 2;
+    KthAncestor(root, node, k);
 }
