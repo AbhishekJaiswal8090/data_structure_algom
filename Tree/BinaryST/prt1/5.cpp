@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Build and Insert BST
-
 class Node
 {
 public:
@@ -48,22 +46,8 @@ Node *BuildBST(int arr[], int n) // n nodes and insertion take logn hence total 
     return root;
 }
 
-void Inorder(Node *root)
-{
-    if (root == nullptr)
-    {
-        return;
-    }
-
-    Inorder(root->left);
-    cout << root->data << " ";
-    Inorder(root->right);
-}
-
 int main()
 {
     int arr[6] = {5, 1, 3, 4, 2, 7};
     Node *root = BuildBST(arr, 6);
-    Inorder(root);
-    cout << endl;
 }

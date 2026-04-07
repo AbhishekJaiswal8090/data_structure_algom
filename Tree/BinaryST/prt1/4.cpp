@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Build and Insert BST
+// In this lecture we are going to study about searching a particular element in a BST
 
 class Node
 {
@@ -48,22 +48,33 @@ Node *BuildBST(int arr[], int n) // n nodes and insertion take logn hence total 
     return root;
 }
 
-void Inorder(Node *root)
+// Search function
+// IT almost works like binary search if key is less than root search in left else search in right
+// avg tc => o(height) worst tc o(n);
+bool Search(Node *root, int key)
 {
-    if (root == nullptr)
+    if (root == NULL)
     {
-        return;
+        return false;
+    }
+    if (root->data == key)
+    {
+        return true;
     }
 
-    Inorder(root->left);
-    cout << root->data << " ";
-    Inorder(root->right);
+    if (key < root->data)
+    {
+        return Search(root->left, key);
+    }
+    else
+    {
+        return Search(root->right, key);
+    }
 }
 
 int main()
 {
     int arr[6] = {5, 1, 3, 4, 2, 7};
     Node *root = BuildBST(arr, 6);
-    Inorder(root);
-    cout << endl;
+    cout << Search(root, 7);
 }
