@@ -14,6 +14,12 @@ using namespace std;
 
 // INorder Traversal of a Binary Search tree gives a sorted sequence always
 
+// Binary Tree are of two types could be said as two types
+// 1. Balanced BST => follow ideal rules like sorted manner
+// 2. Skewed BST => whether there are no left subtrees or vice versa
+
+// Searching sorting and insretion are way more simple compare to Binary Tree
+// Searching takes o(height) time complexity
 int main()
 {
 }
