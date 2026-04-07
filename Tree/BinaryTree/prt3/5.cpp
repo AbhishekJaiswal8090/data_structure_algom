@@ -60,7 +60,7 @@ int KthAncestor(Node *root, int node, int k)
     if (distance == k)
     {
         cout << "kth ancestor is :" << root->data << endl;
-        return -1; // stop further propagation after printing
+        return -1;
     }
 
     return distance;
