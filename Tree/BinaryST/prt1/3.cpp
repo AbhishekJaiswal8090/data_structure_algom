@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Build and Insert BST
+// Building an BST  and Insertion in BST
 
 class Node
 {

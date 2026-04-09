@@ -2,7 +2,7 @@
 using namespace std;
 
 // Now we are going to study Binary Search Tree
-// Binaru search tree is a hierarchial data structure
+// Binary search tree is a hierarchial data structure
 // A Binary Search Tree (BST) is a special type of Binary Tree with an important rule:
 
 // 🔑 Rule:
