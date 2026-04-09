@@ -1,6 +1,17 @@
 #include <iostream>
 using namespace std;
 
+// IN this lecture we are going to learn about how to delete a node in BST
+
+// Deletion of a node in an BST
+// THere are three cases in deletion of a node
+
+// 1=>No child (leaf node)
+
+// 2 =>Have 1 child
+
+// 3=>have 2 children
+
 class Node
 {
 public:
