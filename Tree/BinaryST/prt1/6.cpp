@@ -44,6 +44,27 @@ Node *BuildBST(int arr[], int n)
     return root;
 }
 
+void PrintInRange(Node *root, int start, int end)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    if (root->data >= start && root->data <= end)
+    {
+        cout << root->data << " ";
+        PrintInRange(root->left, start, end);
+    }
+    if (root->data < start)
+    {
+        PrintInRange(root->right, start, end);
+    }
+    if (root->data > end)
+    {
+        PrintInRange(root->left, start, end);
+    }
+}
+
 int main()
 {
 }
