@@ -57,6 +57,17 @@ Node *BuildBST(int arr[], int n) // n nodes and insertion take logn hence total 
     return root;
 }
 
+void InorderTraversal(Node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    InorderTraversal(root->left);
+    cout << root->data << " ";
+    InorderTraversal(root->right);
+}
+
 Node *getInorderS(Node *root)
 {
     while (root->left != NULL)
@@ -105,4 +116,9 @@ int main()
 {
     int arr[6] = {5, 1, 3, 4, 2, 7};
     Node *root = BuildBST(arr, 6);
+
+    InorderTraversal(root);
+    cout << endl;
+    DelNode(root, 4);
+    InorderTraversal(root);
 }
