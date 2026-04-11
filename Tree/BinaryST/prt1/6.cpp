@@ -2,6 +2,7 @@
 using namespace std;
 // So in this lecture we are going to solve
 // Print in range Problem
+// In which we have been given an start and ennd value , all the node that lies bw bw these range we have to prine thier value
 
 class Node
 {
@@ -54,6 +55,7 @@ void PrintInRange(Node *root, int start, int end)
     {
         cout << root->data << " ";
         PrintInRange(root->left, start, end);
+        PrintInRange(root->right, start, end);
     }
     if (root->data < start)
     {
@@ -67,4 +69,7 @@ void PrintInRange(Node *root, int start, int end)
 
 int main()
 {
+    int arr[6] = {5, 1, 3, 4, 2, 7};
+    Node *root = BuildBST(arr, 6);
+    PrintInRange(root, 4, 10);
 }
