@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+// Here we are going to solve the problem from root to leaf path
+
 struct Node
 {
     int data;
