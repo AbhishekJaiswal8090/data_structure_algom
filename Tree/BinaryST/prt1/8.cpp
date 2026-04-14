@@ -63,7 +63,9 @@ bool ValidateBST(Node *root, Node *min, Node *max)
 
 int main()
 {
+
     vector<int> a;
-    a = {8, 5, 3, 1, 4, 6, 10, 11, 14};
+
+    a = {8, 5, 3, 1, 4, 6, 10, 11, 14, 15};
     Node *root = BuildBST(a, 6);
 }
