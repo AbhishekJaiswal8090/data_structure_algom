@@ -48,6 +48,8 @@ Node *BuildBST(int arr[], int n) // n nodes and insertion take logn hence total 
     return root;
 }
 
+// Inorder traversal always gives sorted arrays
+
 void Inorder(Node *root)
 {
     if (root == nullptr)
