@@ -58,9 +58,12 @@ bool ValidateBST(Node *root, Node *min, Node *max)
         return false;
     }
 
-    return ValidateBST(root->left, min, root) && ValidateBST(root->right, root, max)
+    return ValidateBST(root->left, min, root) && ValidateBST(root->right, root, max);
 }
 
 int main()
 {
+    vector<int> a;
+    a = {8, 5, 3, 1, 4, 6, 10, 11, 14};
+    Node *root = BuildBST(a, 6);
 }
