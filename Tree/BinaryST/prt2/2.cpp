@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // Converting BST to Balnced BST
@@ -32,7 +33,7 @@ void Inorder(Node *root, vector<int> &a)
     Inorder(root->right, a);
 }
 
-Node *BuildBalancedBST(Node *root, int start, int end)
+Node *BuildBalancedBST(vector<int> &a, int start, int end)
 {
     if (start > end)
     {
@@ -55,7 +56,7 @@ Node *BalancedBST(Node *root)
 
     int start = 0;
     int end = a.size();
-    return BuildBalancedBST(root, start, end);
+    return BuildBalancedBST(a, start, end);
 }
 
 int main()
