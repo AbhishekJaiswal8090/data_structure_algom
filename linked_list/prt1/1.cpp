@@ -11,6 +11,8 @@ using namespace std;
 // moreover the arrays are contigous but linked list aren't they are connected my pointers
 // the nodes could be anywhere in memory but connected by pointer
 
+// The first node is point by a pointer called Head and same last node is point by last pointer Tail
+
 int main()
 {
 }
