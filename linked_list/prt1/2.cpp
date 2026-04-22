@@ -79,6 +79,24 @@ public:
         }
         cout << tmp->data << endl;
     }
+    void Insert(int pos, int val)
+    {
+        Node *newNode = new Node(val);
+        Node *tmp = Head;
+        for (int i = 0; i < pos - 1; i++)
+        {
+            // corner case
+            if (tmp == NULL)
+            {
+                cout << "Position invalid" << endl;
+                return;
+            }
+            tmp->next = tmp;
+        }
+        // building the connncetion
+        newNode->next = tmp->next;
+        tmp->next = newNode;
+    }
 };
 
 int main()
