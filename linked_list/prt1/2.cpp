@@ -42,7 +42,7 @@ public:
 
         if (Head == NULL)
         {
-            Head = newNode;
+            Head = Tail = newNode;
         }
         else
         {
@@ -55,7 +55,7 @@ public:
         Node *newNode = new Node(val);
         if (Head == NULL)
         {
-            Head = Tail = NULL;
+            Head = Tail = newNode;
         }
         else
         {
@@ -66,6 +66,11 @@ public:
 
     void Print_LL()
     {
+        if (Head == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
         Node *tmp = Head;
         while (tmp->next != NULL)
         {
@@ -83,6 +88,8 @@ int main()
     ll.push_front(2);
     ll.push_front(1);
 
+    ll.push_back(4);
+    ll.push_back(10);
     // Now lets build a function to print our linked list
     ll.Print_LL();
     return 0;
