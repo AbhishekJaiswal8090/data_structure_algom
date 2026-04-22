@@ -50,6 +50,19 @@ public:
             Head = newNode;
         }
     }
+    void push_back(int val)
+    {
+        Node *newNode = new Node(val);
+        if (Head == NULL)
+        {
+            Head = Tail = NULL;
+        }
+        else
+        {
+            Tail->next = newNode;
+            Tail = newNode;
+        }
+    }
 };
 
 int main()
