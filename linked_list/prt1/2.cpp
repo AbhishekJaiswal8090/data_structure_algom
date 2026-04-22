@@ -81,23 +81,37 @@ public:
     }
     void Insert(int pos, int val)
     {
+        if (pos == 1)
+        {
+            push_front(val);
+            return;
+        }
         Node *newNode = new Node(val);
         Node *tmp = Head;
         for (int i = 0; i < pos - 1; i++)
         {
-            // corner case
             if (tmp == NULL)
             {
-                cout << "Position invalid" << endl;
+                cout << "Position invalid " << endl;
                 return;
             }
-            tmp->next = tmp;
+            tmp = tmp->next;
         }
-        // building the connncetion
+        if (tmp == NULL)
+        {
+            cout << "Position invalid" << endl;
+            return;
+        }
+        // building the connection
         newNode->next = tmp->next;
         tmp->next = newNode;
+        if (newNode->next == NULL)
+        {
+            Tail = newNode;
+        }
     }
 };
+
 
 int main()
 {
@@ -108,7 +122,10 @@ int main()
 
     ll.push_back(4);
     ll.push_back(10);
+
     // Now lets build a function to print our linked list
+    ll.Print_LL();
+    ll.Insert(2, 40);
     ll.Print_LL();
     return 0;
 }
