@@ -63,6 +63,17 @@ public:
             Tail = newNode;
         }
     }
+
+    void Print_LL()
+    {
+        Node *tmp = Head;
+        while (tmp->next != NULL)
+        {
+            cout << tmp->data << " -> ";
+            tmp = tmp->next;
+        }
+        cout << tmp->data << endl;
+    }
 };
 
 int main()
@@ -71,5 +82,8 @@ int main()
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
+
+    // Now lets build a function to print our linked list
+    ll.Print_LL();
     return 0;
 }
