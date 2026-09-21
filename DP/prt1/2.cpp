@@ -3,8 +3,8 @@ using namespace std;
 
 // In this lecture we are going to solve problems climbing stairs
 // the prolems is similar to the fibonacci
-// we are given that eityher we can climb 1 or 2 stair at a time
-// the problem is to find out the number of ways to reach n steps
+// we are given that either we can climb 1 or 2 stair at a time
+// the problem is to find out the number of ways to reach nth steps
 // since we can see that number of ways to reach 1 is 1 and ways to reach 2 is 2 that would become base case if using recursion
 
 int climbingStair(int n)
@@ -49,5 +49,4 @@ int cimbingStairTabu(int n)
 
 int main()
 {
-    
 }
