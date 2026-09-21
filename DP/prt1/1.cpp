@@ -27,14 +27,15 @@ int fib(int n)
 
 int fibDP(int n, vector<int> &memo)
 {
-    if (memo[n] != -1)
-    {
-        return memo[n];
-    }
     if (n == 0 || n == 1)
     {
         return memo[n];
     }
+    if (memo[n] != -1)
+    {
+        return memo[n];
+    }
+
     memo[n] = fibDP(n - 1, memo) + fibDP(n - 2, memo);
 
     return memo[n];
