@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// In this lectre we are going to solve KANPSCK prblems
+// In this lectre we are going to solve KNaPaSCK prblem
 // 0-1 Knapsack
 
 // in kapsack problems we rae given a item with their weight and val and capacity of knapsack
