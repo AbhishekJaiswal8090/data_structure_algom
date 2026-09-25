@@ -69,6 +69,38 @@ int solve2(int i, int target, vector<vector<int>> &dp, vector<int> &a, int n)
     return dp[i][target] = pick + not_pick;
 }
 
+// tabulation
+int solve3(vector<int> &a, int target)
+{
+    int n = a.size();
+
+    vector<vector<int>> dp(n + 1, vector<int>(target + 1));
+
+    for (int i = 0; i <= target; i++)
+    {
+        dp[0][i] = 0;
+    }
+    if (a[0] <= target)
+    {
+        dp[0][a[0]] = 1;
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= target; j++)
+        {
+            int not_pick = dp[i - 1][j];
+            int pick = 0;
+            if (a[i] <= j)
+            {
+                pick = dp[i - 1][j - a[i]];
+            }
+            dp[i][j] = pick + not_pick;
+        }
+    }
+    return dp[n][target];
+}
+
 int main()
 {
     vector<int> a = {1, 2, 2, 3};
