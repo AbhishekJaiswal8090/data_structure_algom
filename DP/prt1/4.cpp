@@ -7,6 +7,15 @@ using namespace std;
 // whether there are subset that could add upto specific element "target"
 // if yes retunr true else false;
 
+// What dp[i][j] means in this code
+// In 4.cpp, the state is:
+
+// i = how many elements from the array we have considered so far
+// j = the sum we are trying to form
+// So dp[i][j] is meant to mean:
+
+// “Among the first i elements, what is the maximum sum we can achieve that is exactly equal to j?”
+
 int subsetProblem(vector<int> &st, int target)
 {
     vector<vector<int>> dp(st.size() + 1, vector<int>(target + 1));
