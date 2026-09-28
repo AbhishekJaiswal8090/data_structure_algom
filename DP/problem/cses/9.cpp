@@ -2,7 +2,7 @@
 using namespace std;
 
 // money sum CSES
-
+// recursive soln
 void solve_2(int sum, int n, vector<int> &a, set<int> &st, int idx)
 {
     if (idx < 0)
@@ -30,6 +30,8 @@ void solve(int n, vector<int> &a)
     }
     cout << endl;
 }
+
+// tabular soln
 
 void solve3(int n, vector<int> &a)
 {
