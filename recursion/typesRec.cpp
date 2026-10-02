@@ -2,6 +2,20 @@
 using namespace std;
 
 // Types of rec
+// Recursion is divided into two types
+// 1.Direct
+// 2.Indirect
+
+// Direct - >
+// a. Head Recursion => function call at the begining
+// b. Tail Recursion => function calls at the end
+// c. Tree Recursion => multiple function call in single func
+// d. Nested Recursion => func(func(b));
+
+// Indirect - >
+// in this recurson types the rec is connected with multiple other function
+// ex = > rec(a) calls rec(b) && rec(b) calls rec(a);
+
 // 1. Parameterised rec => it involves passing additional parameters to the recursion
 // to keep track the specifc condition / statement
 
@@ -28,7 +42,6 @@ int calculateSum(int n)
         return 0;
     return n + calculateSum(n - 1);
 }
-
 
 int main()
 {
