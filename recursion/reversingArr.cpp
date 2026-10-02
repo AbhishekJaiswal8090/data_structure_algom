@@ -28,6 +28,27 @@ void revreseArrOnePointer(int i, vector<int> &arr)
     revreseArrOnePointer(i + 1, arr);
 }
 
+// checking for the palindrome recursively
+
+bool isPalindrome(string s, int i)
+{
+
+    int n = s.size();
+
+    if (i >= n / 2)
+    {
+        return true;
+    }
+    if (s[i] == s[n - i - 1])
+    {
+        return isPalindrome(s, i + 1);
+    }
+    else
+    {
+        return false;
+    }
+}
+
 int main()
 {
 }
