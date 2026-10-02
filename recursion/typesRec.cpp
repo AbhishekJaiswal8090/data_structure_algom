@@ -19,6 +19,17 @@ int returnSum(int n, int sum)
     return returnSum(n - 1, sum + n);
 } // this is called parameterised rec
 
+// Functional rec => the functiona;l rec approach involves defining a recursion function
+// without any additional parameters , the function calls itself with a modified argument untill it reches base case
+
+int calculateSum(int n)
+{
+    if (n < 1)
+        return 0;
+    return n + calculateSum(n - 1);
+}
+
+
 int main()
 {
 }
